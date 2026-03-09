@@ -1,0 +1,80 @@
+---
+title: "Chat Interface"
+description: "Talk to Claude Code through a rich visual interface with streaming, plan approval, diffs, and more."
+icon: "message-bot"
+---
+
+The Chat view is where you interact with Claude Code. Instead of working in a terminal, you get a rich UI with real-time streaming, tool use visualization, and interactive approval flows.
+
+## Chat threads
+
+Each project can have **multiple chat threads**. You can create new threads for different tasks or conversations. Threads are persisted locally in your project's `.openspace/chats/` directory.
+
+- **Create** a new chat from the sidebar
+- **Resume** a previous conversation — Coddo uses Claude's session system to maintain context
+- **Delete** threads you no longer need
+- **Link** chats to Kanban tasks for organized task tracking
+
+## Real-time streaming
+
+Messages from Claude Code are **streamed in real time** as they're generated. You see the response appear word by word, just like in the Claude web app — but with your codebase as context.
+
+## Message types
+
+### Text messages
+
+Standard markdown-formatted messages with full rendering support — headings, lists, code blocks, tables, and more.
+
+### Tool use blocks
+
+When Claude Code uses a tool (reading files, writing code, running commands), you see a **Tool Use Block** showing:
+
+- The tool name and input parameters
+- The output/result
+- Expandable details for long outputs
+
+### Plan approval
+
+When Claude Code proposes a plan of changes, you get a **Plan Approval Block** where you can:
+
+- **Review** the proposed changes
+- **Approve** to let Claude proceed
+- **Reject** to ask for a different approach
+
+<Info>Plan approval gives you full control over what Claude Code does to your codebase. You can also use **full-auto** mode to skip approval for trusted operations.</Info>
+
+### Diff viewer
+
+File changes are displayed in a **visual diff viewer** showing exactly what was added, modified, or removed — with syntax highlighting.
+
+### Question blocks
+
+When Claude Code asks you a question with multiple options, you get an interactive **Question Block** with clickable choices and descriptions.
+
+### Todo blocks
+
+Claude Code's internal task lists are rendered as **Todo Blocks**, showing you the AI's planned steps and progress.
+
+## Image support
+
+You can include images in your messages:
+
+- **Drag and drop** images directly into the chat input
+- **Paste** images from your clipboard
+- Supported formats: PNG, JPG, GIF, WebP, BMP, SVG, AVIF
+
+This is useful for sharing mockups, screenshots, or design references with Claude Code.
+
+## Cost tracking
+
+Each message displays its **cost in USD** and **duration**, so you can track your Claude API usage directly in the chat.
+
+## Execution modes
+
+Coddo supports three Claude Code execution modes:
+
+| Mode | Description |
+|------|-------------|
+| **Plan** | Claude proposes changes and waits for your approval before executing |
+| **Edit** | Claude can edit files but asks before major changes |
+| **Full Auto** | Claude executes changes autonomously without approval |

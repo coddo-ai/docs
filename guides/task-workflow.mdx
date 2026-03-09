@@ -1,0 +1,111 @@
+---
+title: "Task Workflow"
+description: "Understand the full lifecycle of a task — from creation to completion."
+icon: "arrow-progress"
+---
+
+This guide explains how tasks move through the Coddo pipeline, from initial idea to completed work.
+
+## The task lifecycle
+
+```
+Backlog → Todo → In Progress → Review → Done
+```
+
+Each stage represents a step in your development workflow:
+
+### 1. Backlog
+
+**Purpose:** Capture ideas and future work.
+
+Add tasks here when you think of something that needs to be done, but you're not ready to work on it yet. Tasks in backlog are just placeholders — they don't need detailed instructions.
+
+### 2. Todo
+
+**Purpose:** Planned tasks ready for execution.
+
+Move tasks here when you're ready to work on them. Before moving to this column, make sure:
+
+- The task has a clear **title**
+- The **instruction** is detailed enough for Claude Code
+- You've configured the **execution mode** (worktree or direct)
+- Optional: Set up a dedicated **Git branch**
+
+### 3. In Progress
+
+**Purpose:** Tasks currently being executed.
+
+When you move a task to In Progress:
+
+1. A **chat thread** is linked to the task (or created automatically)
+2. If using **worktree mode**, a Git worktree is created
+3. Open the Chat view to start interacting with Claude Code
+4. Claude reads the task instruction and begins working
+
+During execution:
+- Claude Code streams responses in real time
+- You can approve or reject proposed changes
+- Tool usage is displayed visually
+- Cost and duration are tracked
+
+### 4. Review
+
+**Purpose:** Verify completed work before marking as done.
+
+After Claude Code finishes:
+
+1. Review the changes in the **Chat** view (diffs, tool outputs)
+2. Check the **Git** view for staged/unstaged changes
+3. Test the changes if needed
+4. Commit and push via the Git integration
+5. Optionally create a **pull request**
+
+### 5. Done
+
+**Purpose:** Completed and reviewed tasks.
+
+Move tasks here when you're satisfied with the result. Done tasks can be:
+
+- **Archived** to clean up the board
+- **Unarchived** if you need to revisit them
+
+## Execution modes explained
+
+### Worktree mode (recommended for parallel work)
+
+```
+main branch ─────────────────────────────
+              ├── task-1-branch (worktree)
+              └── task-2-branch (worktree)
+```
+
+Each task gets its own Git worktree and branch. Benefits:
+- **Parallel execution** — Multiple tasks can run simultaneously
+- **Isolation** — Changes don't interfere with each other
+- **Clean merges** — Each task's changes are on a separate branch
+
+### Direct mode (simpler workflow)
+
+Tasks run on your current branch. Benefits:
+- **Simpler** — No branch management needed
+- **Faster** — No worktree creation overhead
+- **Auto-commit** — Optionally commit changes automatically
+
+<Warning>Only one task can run in direct mode at a time, since they share the same working directory.</Warning>
+
+## Task + Chat relationship
+
+Every in-progress task is linked to a chat thread. This means:
+
+- Opening a task's chat shows the full conversation history
+- Claude Code has the task instruction as context
+- Cost and duration from the chat are attributed to the task
+- You can continue the conversation after pausing
+
+## Best practices
+
+1. **Break work into small tasks** — Smaller, focused tasks get better results than large, vague ones
+2. **Write detailed instructions** — Include what you want, any constraints, and examples
+3. **Use tags** — Categorize tasks (bug, feature, refactor) for better organization
+4. **Review before marking done** — Always check the changes before completing a task
+5. **Archive regularly** — Keep your board clean by archiving done tasks

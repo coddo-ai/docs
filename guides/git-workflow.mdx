@@ -1,0 +1,89 @@
+---
+title: "Git Workflow"
+description: "How to use Coddo's Git integration for a smooth version control workflow."
+icon: "code-branch"
+---
+
+This guide covers how to use Git effectively within Coddo, from branching strategies to handling merge conflicts.
+
+## Basic workflow
+
+The typical Git workflow in Coddo follows these steps:
+
+<Steps>
+  <Step title="Create a branch">
+    Open the **Git** view → **Branches** tab → click **+ New Branch**.
+
+    Name your branch descriptively (e.g., `feature/add-login`, `fix/header-bug`). Coddo automatically sanitizes branch names.
+  </Step>
+  <Step title="Work on your task">
+    Create a Kanban task linked to the branch. Chat with Claude Code to implement the changes.
+  </Step>
+  <Step title="Stage and commit">
+    Open the **Changes** tab to see modified files. Stage the files you want to commit, write a message, and commit.
+  </Step>
+  <Step title="Push to remote">
+    Click **Push** to upload your commits to the remote repository.
+  </Step>
+  <Step title="Create a PR">
+    When your task is complete, create a pull request directly from Coddo.
+  </Step>
+</Steps>
+
+## Worktree-based workflow
+
+When using **worktree mode** for tasks, Coddo manages branches automatically:
+
+1. **Task created** — You specify a branch name and base branch
+2. **Task starts** — Coddo creates a Git worktree with the branch
+3. **Task runs** — Claude Code works in the isolated worktree
+4. **Task completes** — You review changes and merge the branch
+5. **Cleanup** — The worktree is removed after merging
+
+This is ideal for teams or when working on multiple features simultaneously.
+
+## Handling merge conflicts
+
+When merging branches, conflicts can occur. Coddo helps you handle them:
+
+1. **Detection** — Coddo detects conflicted files and shows them in a list
+2. **Resolution** — Open conflicted files to resolve them manually, or ask Claude Code to help
+3. **Finalize** — After resolving all conflicts, finalize the merge
+4. **Abort** — If needed, abort the merge to return to the previous state
+
+<Tip>You can ask Claude Code to resolve merge conflicts for you. Just describe the conflict in the chat and let it propose a resolution.</Tip>
+
+## Remote operations
+
+### Fetch
+
+Download the latest changes from the remote without merging:
+- Click **Fetch** in the Git view to update your local tracking branches
+
+### Pull
+
+Fetch and merge remote changes into your current branch:
+- Click **Pull** to stay up to date with your team's changes
+
+### Push
+
+Upload your local commits to the remote repository:
+- Click **Push** after committing your changes
+
+## Branch management tips
+
+- **Use descriptive names** — `feature/user-auth` is better than `branch1`
+- **Branch per task** — Each Kanban task should have its own branch for clean history
+- **Delete merged branches** — Clean up branches after they're merged
+- **Stay up to date** — Regularly pull from the main branch to avoid large merge conflicts
+- **Use worktree mode** — For parallel tasks, worktrees keep everything isolated
+
+## Viewing history
+
+The **History** tab shows your commit log for the current branch:
+
+- Commit messages and authors
+- Timestamps
+- Commit hashes for reference
+
+Use this to review what's been done and track progress over time.

@@ -1,0 +1,62 @@
+---
+title: "CLAUDE.md Editor"
+description: "Configure Claude Code's behavior for your project with the built-in CLAUDE.md editor."
+icon: "file-pen"
+---
+
+The **CLAUDE.md** file is a special configuration file that tells Claude Code how to behave in your project. Coddo includes a built-in editor so you can manage it without leaving the app.
+
+## What is CLAUDE.md?
+
+`CLAUDE.md` is a markdown file at the root of your project that gives Claude Code project-specific instructions. It's read by Claude Code every time it starts a session.
+
+Common things to include:
+
+- **Project structure** — Describe your file organization
+- **Tech stack** — List frameworks, libraries, and tools
+- **Conventions** — Coding style, naming patterns, file naming
+- **Build commands** — How to build, test, and run the project
+- **Important rules** — Things Claude should always or never do
+
+## Using the editor
+
+1. Click the **CLAUDE.md** icon in the sidebar or workspace header
+2. The editor opens as a full-screen overlay
+3. Edit the markdown content
+4. Changes are saved directly to the `CLAUDE.md` file in your project root
+
+<Tip>A well-written CLAUDE.md dramatically improves Claude Code's output quality. The more context you give, the better the results.</Tip>
+
+## Example CLAUDE.md
+
+```markdown
+# My Project
+
+## Stack
+- React 19 + TypeScript
+- Tailwind CSS v4
+- Zustand for state management
+
+## Commands
+- `npm run dev` — Start dev server
+- `npm run build` — Production build
+- `npm run test` — Run tests
+
+## Conventions
+- Use functional components with hooks
+- Name components in PascalCase
+- Use kebab-case for file names
+- Always add TypeScript types
+
+## Rules
+- Never use `any` type
+- Always handle errors with try/catch
+- Write tests for new features
+```
+
+## Tips
+
+- Keep it concise — Claude Code reads the entire file for every session
+- Focus on what's unique to your project
+- Update it as your project evolves
+- Include examples of patterns you want Claude to follow

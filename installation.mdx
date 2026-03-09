@@ -1,0 +1,65 @@
+---
+title: "Installation"
+description: "Download and install Coddo on macOS or Windows."
+---
+
+## Prerequisites
+
+Before installing Coddo, make sure you have **Claude Code** installed on your machine. Claude Code is a CLI tool from Anthropic that Coddo uses under the hood.
+
+<Steps>
+  <Step title="Install Claude Code">
+    Follow the [official Claude Code installation guide](https://docs.anthropic.com/en/docs/claude-code) to install it via npm:
+
+    ```bash
+    npm install -g @anthropic-ai/claude-code
+    ```
+
+    Make sure you can run `claude` in your terminal before proceeding.
+  </Step>
+  <Step title="Verify installation">
+    Run the following command to confirm Claude Code is working:
+
+    ```bash
+    claude --version
+    ```
+
+    You should see a version number printed.
+  </Step>
+</Steps>
+
+## Download Coddo
+
+<CardGroup cols={2}>
+  <Card title="macOS" icon="apple">
+    Download the `.dmg` file from [coddo.ai](https://coddo.ai).
+
+    1. Open the `.dmg` file
+    2. Drag **Coddo** into your **Applications** folder
+    3. Open Coddo from Applications
+
+    <Tip>If macOS blocks the app, go to **System Settings → Privacy & Security** and click **Open Anyway**.</Tip>
+  </Card>
+  <Card title="Windows" icon="windows">
+    Download the `.exe` installer from [coddo.ai](https://coddo.ai).
+
+    1. Run the installer
+    2. Follow the setup wizard
+    3. Launch Coddo from the Start Menu
+  </Card>
+</CardGroup>
+
+## First launch
+
+When you open Coddo for the first time, you'll go through a quick onboarding:
+
+1. **Welcome screen** — Overview of Coddo
+2. **Claude Code check** — Coddo verifies that Claude Code is installed and accessible
+3. **Login** — Sign in with your Coddo account (Google or email/password)
+4. **Ready** — You're all set to start using Coddo
+
+<Info>Creating a Coddo account is free and lets you sync your projects across devices.</Info>
+
+## Updates
+
+Coddo checks for updates automatically. When a new version is available, you'll see a banner in the app. You can also check manually from **Settings → Check for updates**.

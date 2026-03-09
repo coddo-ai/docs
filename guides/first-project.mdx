@@ -1,0 +1,80 @@
+---
+title: "Creating Your First Project"
+description: "A step-by-step guide to setting up your first project in Coddo."
+icon: "folder-plus"
+---
+
+This guide walks you through creating a project in Coddo and getting it ready for AI-powered development.
+
+## Step 1: Open Coddo
+
+Launch Coddo from your Applications folder (Mac) or Start Menu (Windows). If this is your first time, complete the [onboarding flow](/installation#first-launch) first.
+
+## Step 2: Create or open a project
+
+From the **Start Page**, you have two options:
+
+### Create a new project
+
+1. Click **New Project**
+2. Choose a **parent directory** where the project folder will be created
+3. Enter a **project name**
+4. Coddo creates the folder and initializes it
+
+### Open an existing project
+
+1. Click **Open Project**
+2. Navigate to your existing project folder
+3. Coddo detects the project and initializes the `.openspace/` directory
+
+## Step 3: Understand the project structure
+
+When Coddo initializes a project, it creates a `.openspace/` directory:
+
+```
+your-project/
+├── .openspace/          # Coddo data (auto-created)
+│   ├── chats/           # Chat thread files
+│   └── kanban.json      # Kanban board state
+├── CLAUDE.md            # Claude Code instructions (optional)
+└── ... your code
+```
+
+<Info>The `.openspace/` directory is local to your machine. You can add it to `.gitignore` if you don't want to track it in version control.</Info>
+
+## Step 4: Set up CLAUDE.md
+
+Before chatting with Claude Code, create a `CLAUDE.md` file to give it context about your project. Use the [built-in editor](/features/claude-md) or create it manually.
+
+Key things to include:
+- Your tech stack and frameworks
+- Build and run commands
+- Coding conventions
+- Important project rules
+
+## Step 5: Create your first tasks
+
+Switch to the **Kanban** view and start creating tasks:
+
+1. Click **+ New Task**
+2. Write a descriptive title
+3. Add detailed instructions for Claude Code
+4. Optionally add tags and configure the execution mode
+5. The task appears in the **Backlog** column
+
+## Step 6: Start coding with Claude
+
+1. Move a task to **In Progress**
+2. Open the **Chat** view
+3. Start a conversation — the task instruction provides context
+4. Review Claude's suggestions and approve changes
+5. Use the **Git** view to commit when done
+6. Move the task to **Done**
+
+## Tips for success
+
+- **Write clear instructions** — The more specific your task instructions, the better Claude Code's output
+- **Use worktree mode** for independent tasks that can run in parallel
+- **Review changes carefully** — Use plan mode for important changes so you can approve before execution
+- **Commit often** — Use the Git view to commit after each completed task
+- **Iterate** — If Claude's first attempt isn't right, provide feedback in the chat and let it try again

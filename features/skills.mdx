@@ -1,0 +1,63 @@
+---
+title: "Skills"
+description: "Extend Claude Code's capabilities with custom skills — create your own or install from the registry."
+icon: "wand-magic-sparkles"
+---
+
+Skills are **reusable instructions** that extend what Claude Code can do. Think of them as templates or plugins that give Claude specific expertise for particular tasks.
+
+## What are skills?
+
+A skill is a set of instructions (in markdown) that tells Claude Code how to handle a specific type of task. For example, a skill could teach Claude:
+
+- How to write tests following your project's conventions
+- How to generate API documentation
+- How to create components matching your design system
+- How to review code for security issues
+
+## Creating skills
+
+### AI-generated skills
+
+The easiest way to create a skill is to describe what you want and let Coddo generate it:
+
+1. Open the **Skills** view from the sidebar
+2. Click **+ New Skill**
+3. Describe what the skill should do in plain language
+4. Coddo uses an AI-powered skill creator to generate the skill content
+5. Review and save the skill
+
+<Tip>Be specific in your description. Instead of "write tests", say "write unit tests using Vitest with TypeScript, using describe/it blocks, with setup and teardown".</Tip>
+
+### Manual creation
+
+You can also write skills manually by providing:
+
+- **Name** — A descriptive name for the skill
+- **Description** — What the skill does
+- **Content** — The markdown instructions Claude Code will follow
+
+## Skill scopes
+
+| Scope | Description |
+|-------|-------------|
+| **Project** | Available only in the current project. Stored in the project directory. |
+| **Global** | Available across all your projects. |
+
+## Skills registry
+
+Browse and install community-created skills from the **Skills Registry**:
+
+1. Open the Skills view
+2. Browse available skills or search by keyword
+3. Click **Install** to add a skill to your project
+4. Installed skills are immediately available for use
+
+## Managing skills
+
+From the Skills view, you can:
+
+- **View** installed skills and their details
+- **Edit** skill content and metadata
+- **Uninstall** skills you no longer need
+- **Update** skills when new versions are available

@@ -1,0 +1,87 @@
+---
+title: "Kanban Board"
+description: "Track your tasks visually with a drag-and-drop Kanban board integrated with Claude Code."
+icon: "table-columns"
+---
+
+The Kanban board is the heart of Coddo's task management. It gives you a visual overview of all your tasks and their progress, updated in real time as Claude Code works.
+
+## Columns
+
+Tasks flow through five columns:
+
+| Column | Description |
+|--------|-------------|
+| **Backlog** | Ideas and future tasks not yet planned |
+| **Todo** | Tasks planned and ready to be worked on |
+| **In Progress** | Tasks currently being executed by Claude Code |
+| **Review** | Completed tasks awaiting your review |
+| **Done** | Finished and reviewed tasks |
+
+## Creating tasks
+
+Click **+ New Task** to open the task creation dialog. Each task has:
+
+- **Title** — A short name for the task
+- **Instruction** — Detailed description of what Claude Code should do
+- **Tags** — Color-coded labels for categorization
+- **Branch** — Git branch name and base branch for the task
+- **Execution mode** — `worktree` (isolated branch) or `direct` (current branch)
+- **Images** — Attach reference images or mockups
+
+<Tip>Write clear, detailed instructions for best results. The instruction is what Claude Code uses to understand what you want.</Tip>
+
+## Drag and drop
+
+Move tasks between columns by dragging them. Some rules apply:
+
+- Tasks in **Backlog** can't be moved to later columns until they have an instruction
+- Tasks move forward through the pipeline naturally
+- Moving a task to **In Progress** can trigger the linked chat
+
+## Task details
+
+Click on any task to open the **Detail Panel** on the right side. From here you can:
+
+- Edit the title and instruction
+- Manage tags
+- View linked chat
+- See Git branch information
+- Track duration and cost
+- View attached images
+
+## Tags
+
+Create custom tags with colors to organize your tasks. Tags are defined per project and can be managed from the **Tag Manager** in the Kanban view.
+
+Examples: `bug`, `feature`, `refactor`, `urgent`, `design`
+
+## Execution modes
+
+### Worktree mode
+
+Each task gets its own **Git worktree** — an isolated copy of your repository on a separate branch. This lets you run multiple tasks in parallel without conflicts.
+
+### Direct mode
+
+Tasks are executed on the **current branch** directly. Simpler, but only one task can run at a time. Optionally, auto-commit changes when the task completes.
+
+## Archiving
+
+Completed tasks can be **archived** to keep your board clean. You can:
+
+- Archive individual tasks
+- **Batch archive** all tasks in the Done column
+- View archived tasks in a separate section
+- Unarchive tasks if needed
+
+## View modes
+
+Switch between two layouts:
+
+- **Board view** — Classic Kanban columns side by side
+- **List view** — Collapsible vertical list, compact and scannable
+
+## Persistence
+
+All Kanban data is saved locally in your project's `.openspace/kanban.json` file. Changes are persisted automatically as you work.
