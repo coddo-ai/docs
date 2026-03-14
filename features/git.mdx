@@ -36,20 +36,15 @@ A visual staging area for your Git workflow:
   </Step>
 </Steps>
 
-## Worktrees
+## Git and execution modes
 
-Coddo uses **Git worktrees** for task isolation. When a task runs in worktree mode:
+The Git workflow differs depending on which execution mode your task uses.
 
-1. A new worktree is created in a separate directory
-2. A dedicated branch is checked out
-3. Claude Code works in the isolated environment
-4. After completion, changes can be merged back
+### Worktree tasks
 
-This lets you run **multiple tasks in parallel** without code conflicts.
+When a task runs in worktree mode, Coddo creates an isolated Git worktree with a dedicated branch (e.g. `coddo/1-fix-login`). Claude Code works entirely inside this worktree.
 
-## Merge handling
-
-When merging branches (e.g., after a task completes), Coddo handles:
+Once the task is done, you **validate and merge** the branch back into the base branch from the Git view. Coddo handles:
 
 - **Clean merges** - Automatic merge with no conflicts
 - **Merge conflicts** - Visual conflict detection with a list of conflicted files
@@ -58,15 +53,15 @@ When merging branches (e.g., after a task completes), Coddo handles:
 
 <Tip>You can open conflicted files in your code editor to resolve them, then finalize the merge from Coddo.</Tip>
 
-## Remote operations
+### Direct tasks
 
-Coddo supports standard remote Git operations:
+When a task runs in direct mode, Claude Code works directly in your current working directory. Changes appear immediately in the Changes tab.
 
-| Operation | Description |
-|-----------|-------------|
-| **Fetch** | Download remote changes without merging |
-| **Pull** | Fetch and merge remote changes |
-| **Push** | Upload local commits to the remote |
+You can enable **auto-commit** in Settings (or per task) to automatically commit changes when the task completes. Otherwise, you stage and commit manually from the Changes tab.
+
+## Push
+
+After committing your changes, click **Push** to upload your local commits to the remote repository.
 
 ## Kanban header integration
 

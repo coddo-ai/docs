@@ -66,13 +66,29 @@ Examples: `bug`, `feature`, `refactor`, `urgent`, `design`
 
 ## Execution modes
 
+When creating a task, you choose how Claude Code interacts with your Git repository.
+
 ### Worktree mode (default)
 
-Each task gets its own **Git worktree** - an isolated copy of your repository on a separate branch. This lets you run multiple tasks in parallel without conflicts.
+Coddo creates a **Git worktree** - a full, isolated copy of your repository checked out on a dedicated branch. Claude Code works inside this worktree without touching your main working directory.
+
+- You select a **base branch** (e.g. `main`) and Coddo generates a branch name like `coddo/1-fix-login`
+- Multiple worktree tasks can **run in parallel** since each one is isolated
+- When the task is done, you review the changes and **merge the branch** back into your base branch from the Git view
+- The worktree is cleaned up after merging
+
+This is the recommended mode for most workflows.
 
 ### Direct mode
 
-Tasks are executed on the **current branch** directly. Simpler, but only one task can run at a time. Optionally, auto-commit changes when the task completes.
+Claude Code works directly in your **current working directory**, on whatever branch is currently checked out.
+
+- You can optionally select a **target branch** to work on
+- You can enable **auto-commit** to automatically commit changes when the task finishes
+- Only **one direct task** can run at a time since they share the same files
+- Changes appear immediately in your working directory
+
+Direct mode is simpler and faster - best for quick fixes or when you don't need branch isolation.
 
 ## Archiving
 
