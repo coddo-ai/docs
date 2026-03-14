@@ -25,22 +25,24 @@ From the **Start Page**, you have two options:
 
 1. Click **Open Project**
 2. Navigate to your existing project folder
-3. Coddo detects the project and initializes the `.openspace/` directory
+3. Coddo detects the project and initializes the `.coddo/` directory
 
 ## Step 3: Understand the project structure
 
-When Coddo initializes a project, it creates a `.openspace/` directory:
+When Coddo initializes a project, it creates a `.coddo/` directory:
 
 ```
 your-project/
-├── .openspace/          # Coddo data (auto-created)
-│   ├── chats/           # Chat thread files
-│   └── kanban.json      # Kanban board state
+├── .coddo/              # Coddo data (auto-created)
+│   ├── threads/         # Chat thread files
+│   ├── attachments/     # Task images and attachments
+│   ├── kanban.json      # Kanban board state
+│   └── settings.json    # Project settings
 ├── CLAUDE.md            # Claude Code instructions (optional)
 └── ... your code
 ```
 
-<Info>The `.openspace/` directory is local to your machine. You can add it to `.gitignore` if you don't want to track it in version control.</Info>
+<Info>The `.coddo/` directory is local to your machine. It is automatically added to `.gitignore` by Coddo.</Info>
 
 ## Step 4: Set up CLAUDE.md
 

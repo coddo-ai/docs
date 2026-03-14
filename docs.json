@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Coddo",
   "colors": {
-    "primary": "#00E2CB",
-    "light": "#8AFFC5",
-    "dark": "#00B8A6"
+    "primary": "#000000",
+    "light": "#FFFFFF",
+    "dark": "#000000"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -30,7 +30,6 @@
               "features/skills",
               "features/stats",
               "features/claude-md",
-              "features/sync",
               "features/settings"
             ]
           },
