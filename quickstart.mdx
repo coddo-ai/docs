@@ -11,14 +11,14 @@ After completing the onboarding, you'll land on the **Start Page** where you can
   <Step title="Create a new project">
     Click **New Project**, choose a parent directory and a project name. Coddo will create the folder and initialize it with a `.coddo/` directory for storing chats and tasks.
 
-    <Tip>You can also open an existing project folder — Coddo will initialize the `.coddo/` directory automatically.</Tip>
+    <Tip>You can also open an existing project folder -Coddo will initialize the `.coddo/` directory automatically.</Tip>
   </Step>
   <Step title="Explore the workspace">
     Once your project is open, you'll see the **Workspace** with three zones:
 
-    - **Sidebar** (left) — Navigate between Chat, Kanban, Git, Skills, and Stats views
-    - **Main area** (center) — The active view content
-    - **Detail panel** (right) — Contextual information like task details
+    - **Sidebar** (left) -Navigate between Chat, Kanban, Git, Skills, and Stats views
+    - **Main area** (center) -The active view content
+    - **Detail panel** (right) -Contextual information like task details
   </Step>
   <Step title="Create your first task">
     Switch to the **Kanban** view and click **+ New Task**. Give it a title and an instruction describing what you want Claude Code to do. For example:
@@ -29,17 +29,18 @@ After completing the onboarding, you'll land on the **Start Page** where you can
     installation instructions, and usage examples.
     ```
   </Step>
-  <Step title="Start a chat">
-    Move your task to the **In Progress** column, then open the **Chat** view. A new chat thread is linked to your task. Type your message or let the task instruction guide the conversation.
+  <Step title="Run the task">
+    Move your task to the **Todo** column. Coddo's queue runner automatically picks it up, creates a chat thread, and starts Claude Code.
 
     Claude Code will:
     - Analyze your project
-    - Propose a plan (which you can approve or reject)
     - Execute the changes
-    - Show you diffs and tool outputs in real time
+    - Show you tool outputs and progress in real time
+
+    Click on the task to watch the conversation in the detail panel.
   </Step>
   <Step title="Review and complete">
-    Once Claude Code finishes, review the changes in the chat. Use the **Git** view to stage, commit, and push your changes. Move your task to **Done** on the Kanban board.
+    Once Claude Code finishes, the task moves to **Review**. Check the changes in the chat and the diff viewer. For worktree tasks, validate and merge the branch. Move your task to **Done** on the Kanban board.
   </Step>
 </Steps>
 
@@ -47,7 +48,7 @@ After completing the onboarding, you'll land on the **Start Page** where you can
 
 <CardGroup cols={2}>
   <Card title="Chat Interface" icon="message-bot" href="/features/chat">
-    Learn about all the chat features — streaming, plan approval, diffs, and more.
+    Learn about all the chat features -streaming, plan approval, diffs, and more.
   </Card>
   <Card title="Kanban Board" icon="table-columns" href="/features/kanban">
     Master task management with columns, tags, and execution modes.

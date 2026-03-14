@@ -1,6 +1,6 @@
 ---
 title: "Settings"
-description: "Customize Coddo's appearance, language, and behavior."
+description: "Customize Coddo's appearance, language, models, and behavior."
 icon: "gear"
 ---
 
@@ -20,21 +20,38 @@ Choose your preferred appearance:
 
 Coddo is available in two languages:
 
-- **Fran\u00e7ais** (French) — Primary language
-- **English** — Full translation available
+- **Francais** (French) - Primary language
+- **English** - Full translation available
 
 Switch languages instantly from the settings. The entire UI updates immediately.
 
-## Direct mode auto-commit
+## Default models
 
-When using **direct execution mode** for tasks, you can enable **auto-commit** to automatically create Git commits when a task completes. This keeps your Git history clean without manual intervention.
+Set the default Claude model for chats and tasks separately:
+
+| Model | Description |
+|-------|-------------|
+| **Sonnet 4.6** | Fast and performant (default) |
+| **Opus 4.6** | Most intelligent |
+| **Haiku 4.5** | Fastest and most economical |
+
+You can override the model per chat or per task.
+
+## Git settings
+
+- **Direct mode auto-commit** - Automatically create Git commits when a task in direct mode completes
+- **Direct mode branch picker** - Show a branch selector when creating tasks in direct mode
+
+## API usage
+
+A direct link to your [Claude API usage dashboard](https://claude.ai/settings/usage) to monitor your consumption.
 
 ## Application info
 
 The settings page also displays:
 
-- **Current version** — Your installed Coddo version
-- **Check for updates** — Manually check if a newer version is available
+- **Current version** - Your installed Coddo version
+- **Check for updates** - Manually check if a newer version is available
 
 ## Multi-window
 

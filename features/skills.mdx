@@ -1,6 +1,6 @@
 ---
 title: "Skills"
-description: "Extend Claude Code's capabilities with custom skills — create your own or install from the registry."
+description: "Extend Claude Code's capabilities with custom skills - create your own or install from the registry."
 icon: "wand-magic-sparkles"
 ---
 
@@ -17,40 +17,33 @@ A skill is a set of instructions (in markdown) that tells Claude Code how to han
 
 ## Creating skills
 
-### AI-generated skills
-
-The easiest way to create a skill is to describe what you want and let Coddo generate it:
+The easiest way to create a skill is to describe what you want and let Coddo generate it with AI:
 
 1. Open the **Skills** view from the sidebar
 2. Click **+ New Skill**
 3. Describe what the skill should do in plain language
-4. Coddo uses an AI-powered skill creator to generate the skill content
-5. Review and save the skill
+4. Choose the scope: **Project** (this project only) or **Global** (all projects)
+5. Coddo uses an AI-powered skill creator to generate the skill content
+6. The skill is saved and immediately available for use
+
+You can cancel the generation at any time.
 
 <Tip>Be specific in your description. Instead of "write tests", say "write unit tests using Vitest with TypeScript, using describe/it blocks, with setup and teardown".</Tip>
 
-### Manual creation
-
-You can also write skills manually by providing:
-
-- **Name** — A descriptive name for the skill
-- **Description** — What the skill does
-- **Content** — The markdown instructions Claude Code will follow
-
 ## Skill scopes
 
-| Scope | Description |
-|-------|-------------|
-| **Project** | Available only in the current project. Stored in the project directory. |
-| **Global** | Available across all your projects. |
+| Scope | Location | Description |
+|-------|----------|-------------|
+| **Project** | `.agents/skills/` in your project | Available only in the current project |
+| **Global** | `~/.claude/skills/` | Available across all your projects |
 
 ## Skills registry
 
-Browse and install community-created skills from the **Skills Registry**:
+Browse and install community-created skills from the **Recommended** section:
 
 1. Open the Skills view
-2. Browse available skills or search by keyword
-3. Click **Install** to add a skill to your project
+2. Scroll to the recommended skills section
+3. Click the download button to install a skill
 4. Installed skills are immediately available for use
 
 ## Managing skills
@@ -58,6 +51,6 @@ Browse and install community-created skills from the **Skills Registry**:
 From the Skills view, you can:
 
 - **View** installed skills and their details
-- **Edit** skill content and metadata
+- **Search** skills by name or description
 - **Uninstall** skills you no longer need
-- **Update** skills when new versions are available
+- **Refresh** the skill list to detect changes

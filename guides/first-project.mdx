@@ -8,7 +8,7 @@ This guide walks you through creating a project in Coddo and getting it ready fo
 
 ## Step 1: Open Coddo
 
-Launch Coddo from your Applications folder (Mac) or Start Menu (Windows). If this is your first time, complete the [onboarding flow](/installation#first-launch) first.
+Launch Coddo from your Applications folder. If this is your first time, complete the [onboarding flow](/installation#first-launch) first.
 
 ## Step 2: Create or open a project
 
@@ -61,22 +61,21 @@ Switch to the **Kanban** view and start creating tasks:
 1. Click **+ New Task**
 2. Write a descriptive title
 3. Add detailed instructions for Claude Code
-4. Optionally add tags and configure the execution mode
-5. The task appears in the **Backlog** column
+4. Choose an execution mode (worktree or direct) and a model
+5. Optionally add tags and attach images
+6. The task appears in the **Backlog** column
 
 ## Step 6: Start coding with Claude
 
-1. Move a task to **In Progress**
-2. Open the **Chat** view
-3. Start a conversation — the task instruction provides context
-4. Review Claude's suggestions and approve changes
-5. Use the **Git** view to commit when done
-6. Move the task to **Done**
+1. Move a task to **Todo** - Coddo's queue runner automatically picks it up
+2. Watch the task move to **In Progress** as Claude Code starts working
+3. Click on the task to see the live conversation in the detail panel
+4. When done, the task moves to **Review** - check the changes
+5. Validate and merge (worktree) or commit (direct), then move to **Done**
 
 ## Tips for success
 
-- **Write clear instructions** — The more specific your task instructions, the better Claude Code's output
+- **Write clear instructions** - The more specific your task instructions, the better Claude Code's output
 - **Use worktree mode** for independent tasks that can run in parallel
-- **Review changes carefully** — Use plan mode for important changes so you can approve before execution
-- **Commit often** — Use the Git view to commit after each completed task
-- **Iterate** — If Claude's first attempt isn't right, provide feedback in the chat and let it try again
+- **Review changes carefully** - Check the diff before merging
+- **Iterate** - If Claude's first attempt isn't right, send another message from the review state

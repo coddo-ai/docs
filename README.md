@@ -1,6 +1,6 @@
 # Coddo Documentation
 
-Official documentation for [Coddo](https://coddo.ai) — the visual interface for Claude Code.
+Official documentation for [Coddo](https://coddo.ai) -the visual interface for Claude Code.
 
 ## Structure
 
@@ -15,7 +15,6 @@ features/
 ├── skills.mdx         # Skills system
 ├── stats.mdx          # Statistics & analytics
 ├── claude-md.mdx      # CLAUDE.md editor
-├── sync.mdx           # Desktop-web sync
 └── settings.mdx       # Settings & preferences
 guides/
 ├── first-project.mdx  # Creating your first project

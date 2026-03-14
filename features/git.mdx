@@ -1,10 +1,10 @@
 ---
 title: "Git Integration"
-description: "Manage branches, commits, merges, and worktrees — all from the Coddo UI."
+description: "Manage branches, commits, merges, and worktrees - all from the Coddo UI."
 icon: "code-branch"
 ---
 
-Coddo includes a full **Git integration** so you never have to leave the app to manage version control. The Git view has three tabs: Branches, Changes, and History.
+Coddo includes a full **Git integration** so you never have to leave the app to manage version control. The Git view has two tabs: Branches and Changes.
 
 ## Branches tab
 
@@ -12,9 +12,10 @@ View and manage all your local branches:
 
 - **Create** new branches with sanitized names
 - **Switch** between branches
-- **Delete** branches you no longer need
+- **Delete** local and remote branches
 - See the **current branch** highlighted
 - View **ahead/behind** status compared to the remote
+- Visualize branch relationships in a tree structure
 
 ## Changes tab
 
@@ -35,14 +36,6 @@ A visual staging area for your Git workflow:
   </Step>
 </Steps>
 
-## History tab
-
-Browse the commit history of your current branch:
-
-- View commit messages, authors, and timestamps
-- See commit hashes
-- Navigate through your project's history
-
 ## Worktrees
 
 Coddo uses **Git worktrees** for task isolation. When a task runs in worktree mode:
@@ -58,10 +51,12 @@ This lets you run **multiple tasks in parallel** without code conflicts.
 
 When merging branches (e.g., after a task completes), Coddo handles:
 
-- **Clean merges** — Automatic merge with no conflicts
-- **Merge conflicts** — Visual conflict detection with a list of conflicted files
-- **Abort merge** — Cancel a merge in progress
-- **Finalize merge** — Complete the merge after resolving conflicts
+- **Clean merges** - Automatic merge with no conflicts
+- **Merge conflicts** - Visual conflict detection with a list of conflicted files
+- **Abort merge** - Cancel a merge in progress
+- **Finalize merge** - Complete the merge after resolving conflicts
+
+<Tip>You can open conflicted files in your code editor to resolve them, then finalize the merge from Coddo.</Tip>
 
 ## Remote operations
 
@@ -73,6 +68,10 @@ Coddo supports standard remote Git operations:
 | **Pull** | Fetch and merge remote changes |
 | **Push** | Upload local commits to the remote |
 
-## Pull requests
+## Kanban header integration
 
-Create pull requests directly from Coddo when a task is done. The PR is linked to the task's branch and can be reviewed on GitHub.
+The Kanban board header shows Git status at a glance:
+
+- **Diff stats** - Files changed, insertions, and deletions
+- **Ahead counter** - How many commits ahead of the remote
+- **Commit & Push** button for quick operations

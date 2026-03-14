@@ -20,47 +20,55 @@ Tasks flow through five columns:
 
 ## Creating tasks
 
-Click **+ New Task** to open the task creation dialog. Each task has:
+Click **+ New Task** to open the task creation dialog. Each task gets a sequential number (TASK-00001, TASK-00002, etc.). Each task has:
 
-- **Title** — A short name for the task
-- **Instruction** — Detailed description of what Claude Code should do
-- **Tags** — Color-coded labels for categorization
-- **Branch** — Git branch name and base branch for the task
-- **Execution mode** — `worktree` (isolated branch) or `direct` (current branch)
-- **Images** — Attach reference images or mockups
+- **Title** - A short name for the task
+- **Instruction** - Detailed description of what Claude Code should do
+- **Tags** - Color-coded labels for categorization
+- **Execution mode** - `worktree` (isolated branch) or `direct` (current branch)
+- **Model** - Choose which Claude model to use (Sonnet 4.6, Opus 4.6, or Haiku 4.5)
+- **Images** - Attach reference images or mockups (drag-and-drop or paste)
+
+For worktree mode, you select a **base branch** (e.g. `main`). Coddo automatically generates a branch name like `coddo/1-fix-login`.
+
+For direct mode, you can optionally enable **auto-commit** and select a target branch.
 
 <Tip>Write clear, detailed instructions for best results. The instruction is what Claude Code uses to understand what you want.</Tip>
 
 ## Drag and drop
 
-Move tasks between columns by dragging them. Some rules apply:
+Reorder tasks within and between the **Backlog** and **Todo** columns by dragging them. Tasks in later columns (In Progress, Review, Done) cannot be dragged.
 
-- Tasks in **Backlog** can't be moved to later columns until they have an instruction
-- Tasks move forward through the pipeline naturally
-- Moving a task to **In Progress** can trigger the linked chat
+## Task queue
+
+When a task is moved to **Todo**, Coddo's queue runner automatically picks it up and starts execution. The queue processes tasks one at a time, streaming Claude Code's responses in the linked chat.
+
+During execution you can:
+- **Stop** a running task
+- **Cancel** a task and move it back to backlog
+- Track real-time progress (current tool, completed tools, todo items)
 
 ## Task details
 
-Click on any task to open the **Detail Panel** on the right side. From here you can:
+Click on any task to open the **Detail Panel** on the right side, which shows the linked chat conversation. From the task card you can:
 
 - Edit the title and instruction
 - Manage tags
-- View linked chat
 - See Git branch information
-- Track duration and cost
+- Track duration
 - View attached images
 
 ## Tags
 
-Create custom tags with colors to organize your tasks. Tags are defined per project and can be managed from the **Tag Manager** in the Kanban view.
+Create custom tags with colors to organize your tasks. Tags are defined per project and can be managed from the **Tag Manager** in the Kanban view. Choose from 12 colors.
 
 Examples: `bug`, `feature`, `refactor`, `urgent`, `design`
 
 ## Execution modes
 
-### Worktree mode
+### Worktree mode (default)
 
-Each task gets its own **Git worktree** — an isolated copy of your repository on a separate branch. This lets you run multiple tasks in parallel without conflicts.
+Each task gets its own **Git worktree** - an isolated copy of your repository on a separate branch. This lets you run multiple tasks in parallel without conflicts.
 
 ### Direct mode
 
@@ -72,15 +80,15 @@ Completed tasks can be **archived** to keep your board clean. You can:
 
 - Archive individual tasks
 - **Batch archive** all tasks in the Done column
-- View archived tasks in a separate section
-- Unarchive tasks if needed
+- View archived tasks in a collapsible section
+- Unarchive or permanently remove archived tasks
 
 ## View modes
 
 Switch between two layouts:
 
-- **Board view** — Classic Kanban columns side by side
-- **List view** — Collapsible vertical list, compact and scannable
+- **Board view** - Classic Kanban columns side by side
+- **List view** - Collapsible vertical list, compact and scannable
 
 ## Persistence
 
