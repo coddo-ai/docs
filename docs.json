@@ -58,7 +58,7 @@
         },
         {
           "anchor": "GitHub",
-          "href": "https://github.com/coddo-ai",
+          "href": "https://github.com/coddo-ai/coddo-releases",
           "icon": "github"
         }
       ]
@@ -84,7 +84,7 @@
   "footer": {
     "socials": {
       "x": "https://x.com/coddo_ai",
-      "github": "https://github.com/coddo-ai",
+      "github": "https://github.com/coddo-ai/coddo-releases",
       "instagram": "https://www.instagram.com/coddo.ai/",
       "discord": "https://discord.gg/S6J3kYTgAy"
     }
