@@ -11,9 +11,10 @@ The Chat view is where you interact with Claude Code. Instead of working in a te
 Each project can have **multiple chat threads**. You can create new threads for different tasks or conversations. Threads are persisted locally in your project's `.coddo/threads/` directory.
 
 - **Create** a new chat from the sidebar
-- **Resume** a previous conversation - Coddo uses Claude's session system to maintain context
+- **Resume** a previous conversation - Coddo uses Claude Code's session system to maintain context
 - **Delete** threads you no longer need
-- **Link** chats to Kanban tasks for organized task tracking
+
+When a Kanban task starts, a chat thread is **automatically created and linked** to it.
 
 ## Chat modes
 
@@ -67,7 +68,7 @@ When Claude Code uses a tool (reading files, writing code, running commands), yo
 
 ### Diff viewer
 
-File changes are displayed in a **visual diff viewer** showing exactly what was added, modified, or removed - with syntax highlighting. For task-linked chats, you can view the full diff of all changes made by the task.
+For worktree task threads, a **visual diff viewer** shows all changes made by the task compared to the base branch - with syntax highlighting showing exactly what was added, modified, or removed.
 
 ### Question blocks
 
@@ -83,7 +84,7 @@ You can include images in your messages:
 
 - **Drag and drop** images directly into the chat input
 - **Paste** images from your clipboard
-- Supported formats: PNG, JPG, GIF, WebP, BMP, SVG, AVIF, HEIF, HEIC, TIFF
+- Supports all common image formats (PNG, JPG, GIF, WebP, SVG, etc.)
 
 This is useful for sharing mockups, screenshots, or design references with Claude Code.
 

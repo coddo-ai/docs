@@ -7,35 +7,37 @@ description: "Download and install Coddo on macOS."
 
 Before installing Coddo, make sure you have **Claude Code** installed on your machine. Claude Code is a CLI tool from Anthropic that Coddo uses under the hood.
 
-<Steps>
-  <Step title="Install Claude Code">
-    Follow the [official Claude Code installation guide](https://docs.anthropic.com/en/docs/claude-code) to install it via npm:
+Install Claude Code using one of the following methods:
 
+<Tabs>
+  <Tab title="npm">
     ```bash
     npm install -g @anthropic-ai/claude-code
     ```
-
-    Make sure you can run `claude` in your terminal before proceeding.
-  </Step>
-  <Step title="Verify installation">
-    Run the following command to confirm Claude Code is working:
-
+  </Tab>
+  <Tab title="Homebrew">
     ```bash
-    claude --version
+    brew install claude-code
     ```
+  </Tab>
+  <Tab title="Native install">
+    Download the installer from the [official Claude Code page](https://docs.anthropic.com/en/docs/claude-code). This method does not require Node.js.
+  </Tab>
+</Tabs>
 
-    You should see a version number printed.
-  </Step>
-  <Step title="Log in to Claude Code">
-    Run the following command to authenticate with your Anthropic account:
+Once installed, verify it works:
 
-    ```bash
-    claude
-    ```
+```bash
+claude --version
+```
 
-    Follow the prompts to log in. You need an active Claude subscription (Claude Pro, Team, or Enterprise) to use Claude Code.
-  </Step>
-</Steps>
+Then log in to your Anthropic account:
+
+```bash
+claude
+```
+
+Follow the prompts to authenticate. You need an active Claude subscription (Claude Pro, Team, or Enterprise) to use Claude Code.
 
 ## Download Coddo
 
@@ -55,10 +57,11 @@ Before installing Coddo, make sure you have **Claude Code** installed on your ma
 
 When you open Coddo for the first time, you'll go through a quick onboarding:
 
-1. **Welcome screen** -Overview of Coddo
-2. **Claude Code check** -Coddo verifies that Claude Code is installed and accessible
-3. **Login** -Sign in with your Coddo account (Google or email/password)
-4. **Ready** -You're all set to start using Coddo
+1. **Welcome screen** - Overview of Coddo
+2. **Claude Code check** - Coddo verifies that Claude Code is installed and accessible
+3. **Auth check** - Coddo verifies that Claude Code is authenticated
+4. **Login** - Sign in with your Coddo account (Google or email/password)
+5. **Ready** - You're all set to start using Coddo
 
 <Info>Creating a Coddo account is free. All your project data stays local on your machine.</Info>
 
