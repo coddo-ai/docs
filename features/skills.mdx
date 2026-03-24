@@ -1,7 +1,7 @@
 ---
 title: "Skills"
 description: "Extend Claude Code's capabilities with custom skills - create your own or install from the registry."
-icon: "wand-magic-sparkles"
+icon: "bolt"
 ---
 
 Skills are **reusable instructions** that extend what Claude Code can do. Think of them as templates or plugins that give Claude specific expertise for particular tasks.
@@ -20,7 +20,7 @@ A skill is a set of instructions (in markdown) that tells Claude Code how to han
 The easiest way to create a skill is to describe what you want and let Coddo generate it with AI:
 
 1. Open the **Skills** view from the sidebar
-2. Click **+ New Skill**
+2. Click **\+ New Skill**
 3. Describe what the skill should do in plain language
 4. Choose the scope: **Project** (this project only) or **Global** (all projects)
 5. Coddo uses an AI-powered skill creator to generate the skill content
@@ -28,12 +28,14 @@ The easiest way to create a skill is to describe what you want and let Coddo gen
 
 You can cancel the generation at any time.
 
-<Tip>Be specific in your description. Instead of "write tests", say "write unit tests using Vitest with TypeScript, using describe/it blocks, with setup and teardown".</Tip>
+<Tip>
+  Be specific in your description. Instead of "write tests", say "write unit tests using Vitest with TypeScript, using describe/it blocks, with setup and teardown".
+</Tip>
 
 ## Skill scopes
 
 | Scope | Location | Description |
-|-------|----------|-------------|
+| --- | --- | --- |
 | **Project** | `.agents/skills/` in your project | Available only in the current project |
 | **Global** | `~/.claude/skills/` | Available across all your projects |
 
