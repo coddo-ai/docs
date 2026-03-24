@@ -15,6 +15,24 @@ Each project can have **multiple chat threads**. You can create new threads for 
 - **Delete** threads you no longer need
 - **Link** chats to Kanban tasks for organized task tracking
 
+## Chat modes
+
+Coddo supports two chat modes that change how Claude Code responds. Switch modes from the **mode selector** in the chat input area.
+
+### Execution mode
+
+The default mode. Claude Code **reads, writes, and runs code** in your project. It executes tools, creates files, runs commands, and makes real changes to your codebase.
+
+### Plan mode
+
+Claude Code only **analyzes and plans** without making any changes. It reads your code and proposes a strategy, but does not write files or run commands. Use this when you want to:
+
+- Get an implementation plan before committing to changes
+- Understand a complex part of the codebase
+- Review architecture decisions
+
+You can set the default chat mode in **Settings**.
+
 ## Real-time streaming
 
 Messages from Claude Code are **streamed in real time** as they're generated. You see the response appear word by word, with your codebase as context.
@@ -36,6 +54,8 @@ You can set a default model in **Settings** and override it per chat or per task
 ### Text messages
 
 Standard markdown-formatted messages with full rendering support - headings, lists, code blocks, tables, and more.
+
+The chat input uses a **rich text editor** with support for bold, italic, inline code, code blocks, and lists — so you can format your messages before sending.
 
 ### Tool use blocks
 
@@ -67,6 +87,6 @@ You can include images in your messages:
 
 This is useful for sharing mockups, screenshots, or design references with Claude Code.
 
-## Duration tracking
+## Duration & cost tracking
 
-Each message displays its **duration**, so you can track how long Claude Code takes to respond.
+Each message displays its **duration**, **token count**, and **cost** — so you can track how long Claude Code takes to respond and how much each interaction costs.

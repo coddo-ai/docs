@@ -37,6 +37,25 @@ Set the default Claude model for chats and tasks separately:
 
 You can override the model per chat or per task.
 
+## Execution
+
+Configure how tasks and chats behave by default:
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| **Default execution mode** | Worktree / Direct / Last used | Which mode new tasks default to |
+| **Default chat mode** | Execution / Plan | Whether new chats default to execution or plan mode |
+| **Concurrency** | 1 to 5 | Maximum number of worktree tasks running in parallel |
+
+## Notifications
+
+Coddo sends **native OS notifications** to keep you informed when the app is in the background:
+
+- **Chat completed** — When Claude Code finishes a response
+- **Action required** — When Claude Code needs your input (e.g. a question or approval)
+
+Notifications use your operating system's native notification center.
+
 ## Git settings
 
 - **Direct mode auto-commit** - Automatically create Git commits when a task in direct mode completes
@@ -46,12 +65,38 @@ You can override the model per chat or per task.
 
 A direct link to your [Claude API usage dashboard](https://claude.ai/settings/usage) to monitor your consumption.
 
+## Keyboard shortcuts
+
+macOS menu bar shortcuts for common actions:
+
+| Shortcut | Action |
+|----------|--------|
+| `Cmd+N` | New chat |
+| `Cmd+T` | New task |
+| `Cmd+Shift+B` | Create branch |
+| `Cmd+Shift+S` | Toggle sidebar |
+
+## Open with
+
+Open your project in an external code editor directly from Coddo. Supported editors:
+
+- **Visual Studio Code**
+- **Codex**
+- **Antigravity**
+
+Coddo remembers the last editor you used and sets it as the default.
+
 ## Application info
 
-The settings page also displays:
+The settings page displays:
 
 - **Current version** - Your installed Coddo version
-- **Check for updates** - Manually check if a newer version is available
+- **Check for updates** - Manually check if a newer version is available (also accessible from the macOS menu bar)
+- **What's New** - An in-app changelog showing the latest features and changes for each version
+
+## Project persistence
+
+Coddo remembers your open projects. When you **restart the app**, it automatically reopens the projects you had open in your last session, restoring you to where you left off.
 
 ## Multi-window
 

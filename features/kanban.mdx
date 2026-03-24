@@ -20,14 +20,16 @@ Tasks flow through five columns:
 
 ## Creating tasks
 
-Click **+ New Task** to open the task creation dialog. Each task gets a sequential number (TASK-00001, TASK-00002, etc.). Each task has:
+Click **+ New Task** from the Kanban view or from the **+ button in the sidebar** to open the task creation dialog. Each task gets a sequential number (TASK-00001, TASK-00002, etc.). Each task has:
 
 - **Title** - A short name for the task
-- **Instruction** - Detailed description of what Claude Code should do
+- **Instruction** - Detailed description of what Claude Code should do, with a **rich text editor** supporting bold, italic, code, and lists
 - **Tags** - Color-coded labels for categorization
-- **Execution mode** - `worktree` (isolated branch) or `direct` (current branch)
+- **Execution mode** - `worktree` (isolated branch), `direct` (current branch), or `last used`. The default is configurable in **Settings**
 - **Model** - Choose which Claude model to use (Sonnet 4.6, Opus 4.6, or Haiku 4.5)
 - **Images** - Attach reference images or mockups (drag-and-drop or paste)
+
+<Tip>If you close the task creation dialog before submitting, all fields (title, instruction, tags, mode, model, images) are **preserved** and restored when you reopen it.</Tip>
 
 For worktree mode, you select a **base branch** (e.g. `main`). Coddo automatically generates a branch name like `coddo/1-fix-login`.
 
@@ -41,7 +43,7 @@ Reorder tasks within and between the **Backlog** and **Todo** columns by draggin
 
 ## Task queue
 
-When a task is moved to **Todo**, Coddo's queue runner automatically picks it up and starts execution. The queue processes tasks one at a time, streaming Claude Code's responses in the linked chat.
+When a task is moved to **Todo**, Coddo's queue runner automatically picks it up and starts execution. Worktree tasks can run **up to 5 in parallel** — each in its own isolated worktree, so they don't conflict. Direct mode tasks run one at a time. You can configure the maximum number of concurrent tasks in **Settings**.
 
 During execution you can:
 - **Stop** a running task
@@ -55,6 +57,7 @@ Click on any task to open the **Detail Panel** on the right side, which shows th
 - Edit the title and instruction
 - Manage tags
 - See Git branch information
+- **Checkout** the task's branch directly from the card for quick branch switching
 - Track duration
 - View attached images
 
@@ -73,7 +76,7 @@ When creating a task, you choose how Claude Code interacts with your Git reposit
 Coddo creates a **Git worktree** - a full, isolated copy of your repository checked out on a dedicated branch. Claude Code works inside this worktree without touching your main working directory.
 
 - You select a **base branch** (e.g. `main`) and Coddo generates a branch name like `coddo/1-fix-login`
-- Multiple worktree tasks can **run in parallel** since each one is isolated
+- Up to **5 worktree tasks can run in parallel**, each in its own isolated copy. Configure the concurrency limit in **Settings**
 - When the task is done, you review the changes and **merge the branch** back into your base branch from the Git view
 - The worktree is cleaned up after merging
 
@@ -89,6 +92,16 @@ Claude Code works directly in your **current working directory**, on whatever br
 - Changes appear immediately in your working directory
 
 Direct mode is simpler and faster - best for quick fixes or when you don't need branch isolation.
+
+### Default execution mode
+
+You can set which mode new tasks default to in **Settings**:
+
+| Option | Behavior |
+|--------|----------|
+| **Worktree** | Always default to worktree mode |
+| **Direct** | Always default to direct mode |
+| **Last used** | Use whatever mode you selected last |
 
 ## Archiving
 

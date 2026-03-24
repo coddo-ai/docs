@@ -28,7 +28,7 @@ When a task is moved to Todo, Coddo's **queue runner** automatically picks it up
 
 - The task has a clear **title**
 - The **instruction** is detailed enough for Claude Code
-- You've configured the **execution mode** (worktree or direct)
+- You've configured the **execution mode** (worktree, direct, or last used — the default is configurable in **Settings**)
 - You've selected a **model** (Sonnet, Opus, or Haiku)
 
 ### 3. In Progress
@@ -77,8 +77,8 @@ main branch -----------------------------------
               |-- coddo/2-add-tests (worktree)
 ```
 
-Each task gets its own Git worktree and branch. Benefits:
-- **Parallel execution** - Multiple tasks can run simultaneously
+Each task gets its own Git worktree and branch. Up to **5 worktree tasks can execute in parallel**, configurable in Settings. Benefits:
+- **Parallel execution** - Up to 5 tasks can run simultaneously
 - **Isolation** - Changes don't interfere with each other
 - **Clean merges** - Each task's changes are on a separate branch
 
