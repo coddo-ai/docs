@@ -8,15 +8,17 @@ description: "Download and install Coddo on macOS."
 Before installing Coddo, make sure you have **Claude Code** installed on your machine. Claude Code is a CLI tool from Anthropic that Coddo uses under the hood.
 
 <Tabs>
-  <Tab title="Homebrew (recommended)">
-    The simplest way to install Claude Code on macOS:
+  <Tab title="Install script (recommended)">
+    The simplest way to install Claude Code:
 
+    ```bash
+    curl -fsSL https://claude.ai/install.sh | bash
+    ```
+  </Tab>
+  <Tab title="Homebrew">
     ```bash
     brew install claude-code
     ```
-  </Tab>
-  <Tab title="Standalone installer">
-    Download the installer from the [official Claude Code page](https://docs.anthropic.com/en/docs/claude-code/overview#install-and-authenticate). No dependencies required.
   </Tab>
   <Tab title="npm">
     If you already have Node.js installed:
