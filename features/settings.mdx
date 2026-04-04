@@ -45,6 +45,7 @@ Configure how tasks and chats behave by default:
 |---------|---------|-------------|
 | **Default execution mode** | Worktree / Direct / Last used | Which mode new tasks default to |
 | **Default chat mode** | Execution / Plan | Whether new chats default to execution or plan mode |
+| **Default column** | Backlog / Todo / Last used | Which column new tasks are created in |
 | **Concurrency** | 1 to 5 | Maximum number of worktree tasks running in parallel |
 
 ## Notifications
@@ -75,6 +76,9 @@ macOS menu bar shortcuts for common actions:
 | `Cmd+T` | New task |
 | `Cmd+Shift+B` | Create branch |
 | `Cmd+Shift+S` | Toggle sidebar |
+| `Cmd+Shift+G` | Open Git view |
+| `Cmd+Shift+A` | Open Statistics view |
+| `Cmd+Shift+P` | Open CLAUDE.md editor |
 
 ## Open with
 
@@ -94,10 +98,12 @@ The settings page displays:
 - **Check for updates** - Manually check if a newer version is available (also accessible from the macOS menu bar)
 - **What's New** - An in-app changelog showing the latest features and changes for each version
 
-## Project persistence
+## Multi-project
 
-Coddo remembers your open projects. When you **restart the app**, it automatically reopens the projects you had open in your last session, restoring you to where you left off.
+All your projects live in a **single window**. The sidebar includes a **project switcher** that lets you navigate between projects instantly. You can:
 
-## Multi-window
+- **Add projects** — create new or open existing folders
+- **Reorder projects** — drag and drop to organize them
+- **Switch projects** — click to jump between them, each with its own chat, Kanban board, and Git state
 
-Each project opens in its own **separate window**. You can work on multiple projects simultaneously, each with its own chat, Kanban board, and Git state.
+Coddo remembers your open projects. When you **restart the app**, it automatically reopens the projects from your last session.
