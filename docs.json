@@ -53,7 +53,7 @@
         },
         {
           "anchor": "Download",
-          "href": "https://coddo.ai/#download",
+          "href": "https://coddo.ai/download",
           "icon": "download"
         },
         {
@@ -78,7 +78,7 @@
     "primary": {
       "type": "button",
       "label": "Download",
-      "href": "https://coddo.ai/#download"
+      "href": "https://coddo.ai/download"
     }
   },
   "footer": {
