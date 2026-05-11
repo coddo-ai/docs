@@ -1,0 +1,70 @@
+---
+title: "Settings"
+description: "Customize Whisper Island — language, display mode, clipboard behavior, and more."
+icon: "gear"
+---
+
+Open Whisper Island's settings from the tray menu (menu bar icon → **Settings**) or by clicking the gear on the overlay.
+
+## Display
+
+| Setting | Options | Description |
+| --- | --- | --- |
+| **Display mode** | Pill / Notch | Where the overlay lives. See [Overlay Modes](/whisper-island/features/overlay) |
+| **Start at login** | On / Off | Launch Whisper Island automatically when you log in |
+| **Show tray icon** | On / Off | Keep the tray icon visible in the menu bar |
+
+## Recording
+
+| Setting | Options | Description |
+| --- | --- | --- |
+| **Recording mode** | Push-to-talk / Toggle | How the shortcut behaves. See [Recording Modes](/whisper-island/features/recording-modes) |
+| **Input device** | System default | The OS audio input is used. Change in System Settings → Sound |
+
+## Language
+
+| Setting | Options | Description |
+| --- | --- | --- |
+| **Transcription language** | Auto / FR / EN / ... | Pinning meaningfully improves accuracy on short utterances |
+| **App language** | EN / FR | Whisper Island's own UI language |
+
+## Clipboard
+
+Whisper Island writes the transcript to the clipboard, simulates `Cmd+V`, and then restores your previous clipboard content after 200 ms.
+
+| Setting | Description |
+| --- | --- |
+| **Keep transcript in clipboard** | If enabled, the transcript stays in the clipboard instead of being replaced by the previous content. Toggle live with `Cmd+Shift+V` |
+| **Restore delay** | Time before the previous clipboard is restored (default: 200 ms) |
+
+## Shortcuts
+
+Rebind all four global shortcuts. See [Shortcuts](/whisper-island/features/shortcuts) for the full list and the rebinding flow.
+
+## Account
+
+| Action | Description |
+| --- | --- |
+| **Sign in / out** | Manage your Coddo account session |
+| **Usage** | See your current weekly transcription word count and limit |
+| **Plan** | Free or Basic subscription |
+
+Whisper Island shares its account, quota, and backend with [Coddo's voice dictation](/features/voice-dictation). Anything you transcribe in either app counts against the same weekly quota.
+
+## Auto-update
+
+| Setting | Description |
+| --- | --- |
+| **Check for updates** | Manually check for a newer Whisper Island build |
+| **Install update** | Visible when an update has been downloaded — restart applies it |
+
+The **What's New** dialog opens once on first launch after a version bump, listing the changes for that release.
+
+## Reset
+
+If something goes sideways, you can:
+
+- **Sign out** to clear your session (`auth.json` is encrypted with a machine-derived key — moving it between machines fails decryption and the file is recreated on next sign-in)
+- **Reset settings** to factory defaults (overlay mode, shortcuts, language)
+
+Both actions are reversible — re-sign-in or re-customize and you're back where you were.

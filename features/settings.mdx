@@ -25,17 +25,20 @@ Coddo is available in two languages:
 
 Switch languages instantly from the settings. The entire UI updates immediately.
 
+## Providers
+
+Coddo can run tasks and chats with either **Claude Code** or **OpenAI Codex CLI**. Authenticate each provider from Settings — the provider step is also part of onboarding and can be skipped if you want to configure it later.
+
+| Provider | Models |
+|----------|--------|
+| **Claude Code** | Sonnet 4.6, Opus 4.7, Haiku 4.5 |
+| **Codex CLI** | GPT-5.5, GPT-5.4, GPT-5.4 Mini, 5.3 Codex, 5.3 Codex Spark |
+
 ## Default models
 
-Set the default Claude model for chats and tasks separately:
+Set the default model for chats and tasks separately. The default applies when you create a new chat or task — you can always override it per item.
 
-| Model | Description |
-|-------|-------------|
-| **Sonnet 4.6** | Fast and performant (default) |
-| **Opus 4.6** | Most intelligent |
-| **Haiku 4.5** | Fastest and most economical |
-
-You can override the model per chat or per task.
+You can also jump to the **Codex usage** view from Settings to track Codex consumption alongside the Claude API usage dashboard.
 
 ## Execution
 
@@ -62,9 +65,26 @@ Notifications use your operating system's native notification center.
 - **Direct mode auto-commit** - Automatically create Git commits when a task in direct mode completes
 - **Direct mode branch picker** - Show a branch selector when creating tasks in direct mode
 
+## Voice dictation
+
+Pick the **transcription language** Whisper should use for the mic button in chat and task creation. Pinning the language meaningfully improves accuracy on short utterances. See [Voice Dictation](/features/voice-dictation) for the full details.
+
+## Account
+
+Signing in with a **Coddo account** is **optional**. You only need it for:
+
+- Voice transcription quota (free tier and subscription)
+- Cross-device account sync of name, avatar, and plan
+
+All project data — chats, tasks, attachments — stays local regardless of account state.
+
+## Privacy
+
+**Anonymous metrics** are **opt-in**. Toggle them on if you want to help us improve Coddo with anonymized usage data — nothing is sent unless you explicitly enable it.
+
 ## API usage
 
-A direct link to your [Claude API usage dashboard](https://claude.ai/settings/usage) to monitor your consumption.
+A direct link to your [Claude API usage dashboard](https://claude.ai/settings/usage) to monitor your consumption. The **Codex usage** entry takes you to the Codex consumption view in the same way.
 
 ## Keyboard shortcuts
 

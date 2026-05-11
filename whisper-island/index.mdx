@@ -1,0 +1,72 @@
+---
+title: "Whisper Island"
+description: "Voice transcription everywhere on your Mac. You speak, the text is pasted into the active app."
+---
+
+## What is Whisper Island?
+
+**Whisper Island** is a macOS app from the Coddo team that turns voice transcription into a system-wide shortcut. You hold (or toggle) a global shortcut, you speak, and the transcribed text is pasted directly into the active app via `Cmd+V` — Slack, Notion, your IDE, your browser, your mail client. Anywhere, without leaving the window you're in.
+
+The overlay lives in your MacBook's **notch**, or as a floating **pill** near the top of the screen. Always there, never in the way.
+
+<CardGroup cols={2}>
+  <Card title="Pill or notch overlay" icon="circle-dot">
+    A floating pill near the top of the screen, or an overlay tucked into the MacBook notch. Pick the one that suits your workflow.
+  </Card>
+  <Card title="Push-to-talk or toggle" icon="keyboard">
+    Hold a shortcut to record, release to transcribe. Or tap once to start, tap again to stop.
+  </Card>
+  <Card title="Same Coddo account" icon="user">
+    One login, one quota, two apps. Voice usage is shared with Coddo's integrated dictation.
+  </Card>
+  <Card title="Local audio capture" icon="microphone">
+    Audio is captured locally and sent to the Coddo backend only for transcription. Your OpenAI key never leaves the server.
+  </Card>
+</CardGroup>
+
+## How it works
+
+<Steps>
+  <Step title="Bind a global shortcut">
+    By default `Cmd+Shift+Space`. Configurable from Settings.
+  </Step>
+  <Step title="Speak">
+    Hold the shortcut (push-to-talk) or tap to start (toggle). The overlay lights up while recording.
+  </Step>
+  <Step title="Text is pasted">
+    Whisper Island writes the transcribed text into the active app via `Cmd+V`, then restores your previous clipboard.
+  </Step>
+</Steps>
+
+## Designed to disappear
+
+Whisper Island is built to be invisible between uses and pixel-perfect when you speak.
+
+- The notch mode uses macOS-private window levels so the overlay sits above the menu bar without stealing focus.
+- The pill mode is click-through except inside the visible shape — your cursor passes right through the rest of the window.
+- When Coddo Desktop is running, the mic shortcut becomes a no-op so the same key combo doesn't double-fire.
+
+## Who is it for?
+
+If you write a lot every day — messages, docs, emails, task briefs — voice transcription gives you back hours every week. Whisper Island is designed for people who want the speed of voice without leaving the app they're already in.
+
+## Get started
+
+<CardGroup cols={2}>
+  <Card title="Installation" icon="download" href="/whisper-island/installation">
+    Download and install Whisper Island on your Mac.
+  </Card>
+  <Card title="Quick Start" icon="rocket" href="/whisper-island/quickstart">
+    Set up your shortcut and dictate your first message.
+  </Card>
+  <Card title="Overlay modes" icon="circle-dot" href="/whisper-island/features/overlay">
+    Choose between the pill and the notch overlay.
+  </Card>
+  <Card title="Recording modes" icon="keyboard" href="/whisper-island/features/recording-modes">
+    Push-to-talk vs toggle, and when to use each.
+  </Card>
+</CardGroup>
+
+<Info>
+Whisper Island is **macOS only** for the moment. On Windows and Linux, you can still use Coddo's built-in [Voice Dictation](/features/voice-dictation) inside the Coddo app.
+</Info>

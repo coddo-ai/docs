@@ -1,0 +1,45 @@
+---
+title: "Overlay Modes"
+description: "Pick between the floating pill and the macOS notch overlay."
+icon: "circle-dot"
+---
+
+Whisper Island has two overlay modes. Both keep the window **always on top** and **click-through** outside the visible shape, so they never get in the way.
+
+## Pill
+
+A floating overlay near the top of the screen, centered horizontally. Works on every Mac.
+
+- Compact when idle
+- Animates when you're recording
+- Can be hidden with `Cmd+Shift+H` and re-shown with the same shortcut
+- Survives Spaces and full-screen apps — it stays put on the current desktop
+
+The pill is the default mode. Pick this if you don't have a notch, or if you prefer a clearly visible indicator.
+
+## Notch
+
+The overlay tucks into the macOS notch area on MacBooks that have one. Visually, the pill sits inside the black notch space.
+
+- Invisible when you don't need it
+- Uses a private window level so it sits above the menu bar without stealing focus
+- The visible shape is the only interactive area — the cursor passes through the rest of the window
+
+<Info>
+The notch mode uses `nswindow-napi` and a few macOS workarounds (`SetFrameOrigin`, `DisableFrameConstraint`) to keep the window sitting at the top of the screen even after `constrainFrameRect`. If those fail to load (rare), Whisper Island falls back to a high `screen-saver` window level — the overlay still works, it just sits slightly below the notch.
+</Info>
+
+### Switching modes
+
+Change modes in **Settings → Display**. The old overlay is destroyed and a fresh one is created — no need to restart the app.
+
+## Visibility shortcuts
+
+| Shortcut | Action |
+| --- | --- |
+| `Cmd+Shift+H` | Show / hide the pill (no-op in notch mode) |
+| `Cmd+Shift+L` | Expand / collapse the overlay (shows transcription state, history, etc.) |
+
+## Why two modes?
+
+The pill is for visibility — you always know where it is. The notch mode is for absence — the overlay only appears when you speak. Pick whichever matches the way you want to feel the app in your day.

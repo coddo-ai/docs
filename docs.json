@@ -3,15 +3,21 @@
   "theme": "mint",
   "name": "Coddo",
   "colors": {
-    "primary": "#35C7FF",
+    "primary": "#000000",
     "light": "#FFFFFF",
     "dark": "#000000"
+  },
+  "background": {
+    "color": {
+      "light": "#FFFDFA",
+      "dark": "#0A0A0A"
+    }
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Coddo",
         "groups": [
           {
             "group": "Getting Started",
@@ -27,6 +33,7 @@
               "features/chat",
               "features/kanban",
               "features/git",
+              "features/voice-dictation",
               "features/skills",
               "features/stats",
               "features/claude-md",
@@ -42,6 +49,28 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Whisper Island",
+        "groups": [
+          {
+            "group": "Whisper Island",
+            "pages": [
+              "whisper-island/index",
+              "whisper-island/installation",
+              "whisper-island/quickstart"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "whisper-island/features/overlay",
+              "whisper-island/features/recording-modes",
+              "whisper-island/features/shortcuts",
+              "whisper-island/features/settings"
+            ]
+          }
+        ]
       }
     ],
     "global": {
@@ -52,9 +81,14 @@
           "icon": "globe"
         },
         {
-          "anchor": "Download",
+          "anchor": "Download Coddo",
           "href": "https://coddo.ai/download",
           "icon": "download"
+        },
+        {
+          "anchor": "Whisper Island",
+          "href": "https://coddo.ai/whisper-island",
+          "icon": "microphone"
         },
         {
           "anchor": "GitHub",

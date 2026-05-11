@@ -44,17 +44,33 @@ You can set the default chat mode in **Settings**.
 
 Messages from Claude Code are **streamed in real time** as they're generated, with your codebase as context. Your last message is **pinned at the top of the chat view** with sticky scroll, so you always keep sight of what you asked while Claude Code responds below.
 
-## Model selection
+## Providers and models
 
-Choose which Claude model to use for each conversation:
+Coddo supports both **Claude Code** and **OpenAI Codex CLI** as execution backends. Pick the provider in the model selector inside the chat input area or in the task creation dialog. Provider and model info also show up in the statistics view.
+
+### Claude models
 
 | Model | Description |
 | --- | --- |
 | **Sonnet 4.6** | Fast and performant (default) |
-| **Opus 4.6** | Most intelligent |
+| **Opus 4.7** | Most intelligent |
 | **Haiku 4.5** | Fastest and most economical |
 
-You can set a default model in **Settings** and override it per chat or per task.
+### Codex models
+
+| Model | Description |
+| --- | --- |
+| **GPT-5.5** | Latest general-purpose OpenAI model |
+| **GPT-5.4** | High-performance generation |
+| **GPT-5.4 Mini** | Smaller and faster |
+| **5.3 Codex** | Codex-tuned model |
+| **5.3 Codex Spark** | Lightweight Codex variant |
+
+You can set a default model in **Settings** and override it per chat or per task. The chat view remembers the last-used model for each conversation and restores it when you come back.
+
+<Info>
+If no provider is configured, the model selector redirects you to **Settings** where you can authenticate Claude and/or Codex.
+</Info>
 
 ## Message types
 
@@ -64,6 +80,10 @@ Standard markdown-formatted messages with full rendering support - headings, lis
 
 The chat input uses a **rich text editor** with support for bold, italic, inline code, code blocks, and lists — so you can format your messages before sending.
 
+### Voice dictation
+
+Every chat input and task instruction field has a **mic button**. Click it to record, click again to stop, and the transcribed text is dropped straight into the field — ready to edit or send. See the [Voice Dictation](/features/voice-dictation) page for details, language settings, and limits.
+
 ### Tool use blocks
 
 When Claude Code uses a tool (reading files, writing code, running commands), you see a **Tool Use Block** showing:
@@ -71,6 +91,10 @@ When Claude Code uses a tool (reading files, writing code, running commands), yo
 - The tool name and input parameters
 - The output/result
 - Expandable details for long outputs
+
+### Skill cards
+
+When a chat invokes a [skill](/features/skills), the message renders as a dedicated **skill card** with the skill name, icon, author, and key parameters — so you can see at a glance which skill ran and how.
 
 ### Diff viewer
 
@@ -97,3 +121,14 @@ This is useful for sharing mockups, screenshots, or design references with Claud
 ## Duration & cost tracking
 
 Each message displays its **duration**, **token count**, and **cost** — so you can track how long Claude Code takes to respond and how much each interaction costs.
+
+## Chat header quick actions
+
+The chat header gives you one-click access to the most common task operations:
+
+- **Checkout** — switch to the task's branch
+- **Cancel** — stop the current run
+- **Archive** / **Delete** — clean up the thread
+- **Diff** — open the diff viewer for the chat's changes
+
+The header also surfaces keyboard shortcut hints on hover so you can learn them as you go.

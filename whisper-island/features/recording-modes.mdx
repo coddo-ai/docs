@@ -1,0 +1,53 @@
+---
+title: "Recording Modes"
+description: "Push-to-talk vs toggle — pick the one that matches the way you dictate."
+icon: "keyboard"
+---
+
+Whisper Island can record audio in two modes. Switch from **Settings → Recording**.
+
+## Push-to-talk
+
+**Hold the shortcut to record, release to transcribe.**
+
+- Press and hold the mic shortcut
+- Speak while holding
+- Release the shortcut — recording stops and Whisper transcribes immediately
+- The text is pasted into the active app via `Cmd+V`
+
+Push-to-talk is best for short utterances and when you want full control over the start and end of each clip. There's no risk of leaving the mic on by mistake.
+
+<Tip>
+Push-to-talk uses a JXA helper that polls `CGEventSourceFlagsState` to detect when you release the modifier keys. The process exits as soon as the modifier mask is no longer fully held — no `System Events` fallback, no double-fire.
+</Tip>
+
+## Toggle
+
+**Tap the shortcut to start, tap again to stop.**
+
+- Tap the mic shortcut to start recording
+- Speak
+- Tap the shortcut again to stop and transcribe
+
+Toggle is best for longer dictations — emails, task briefs, doc paragraphs — when you don't want to keep a key held down. The overlay clearly shows you're still recording.
+
+## Which one should you pick?
+
+| If you... | Use |
+| --- | --- |
+| Dictate short messages and want zero false starts | **Push-to-talk** |
+| Write long emails, docs, or task briefs | **Toggle** |
+| Want a hands-free flow once recording starts | **Toggle** |
+| Frequently switch between two-second corrections and longer dictations | **Push-to-talk** |
+
+## What gets pasted
+
+The text is written to the clipboard, then `Cmd+V` is simulated via `osascript … System Events keystroke "v"`. After 200 ms, the previous clipboard content is restored — unless you've enabled **Keep transcript in clipboard** in settings (see [Settings](/whisper-island/features/settings)).
+
+<Warning>
+Pasting requires **Accessibility access**. If the text doesn't appear in the active app, check **System Settings → Privacy & Security → Accessibility** and make sure Whisper Island is enabled.
+</Warning>
+
+## Hallucination filter
+
+Whisper occasionally returns known hallucinations on silent or near-silent recordings (`sous-titres réalisés par…`, `merci`, `you`, etc.). Whisper Island filters these out automatically — if you didn't speak, nothing gets pasted.

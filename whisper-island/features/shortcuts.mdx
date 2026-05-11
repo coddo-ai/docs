@@ -1,0 +1,40 @@
+---
+title: "Shortcuts"
+description: "Global shortcuts for the mic, overlay visibility, and clipboard behavior."
+icon: "command"
+---
+
+Whisper Island registers a handful of **global shortcuts** so you can drive it from any app without bringing the window forward.
+
+## Default shortcuts
+
+| Shortcut | Action |
+| --- | --- |
+| `Cmd+Shift+Space` | Mic toggle / push-to-talk |
+| `Cmd+Shift+H` | Show / hide the pill (no-op in notch mode) |
+| `Cmd+Shift+L` | Expand / collapse the overlay |
+| `Cmd+Shift+V` | Toggle clipboard inclusion |
+
+All four are **rebindable** from Settings → Shortcuts.
+
+## Rebinding
+
+Open Settings → Shortcuts, click the shortcut you want to change, and press the new combination. Whisper Island pauses all global shortcuts while you're recording the new one to avoid accidental triggers, then re-registers them when you confirm.
+
+<Warning>
+Pick combos that include at least one modifier (`Cmd`, `Ctrl`, `Alt`, `Shift`). Single-key shortcuts would conflict with normal typing.
+</Warning>
+
+## Coexistence with Coddo Desktop
+
+When Coddo Desktop is running, it creates a lockfile (`/tmp/coddo-desktop-active.lock`). Whisper Island detects this and the mic shortcut becomes a no-op so the same key combo doesn't double-fire — Coddo Desktop owns it instead.
+
+Quit Coddo Desktop and Whisper Island reclaims the shortcut automatically.
+
+## During onboarding
+
+While the onboarding window is open, Whisper Island registers only a minimal set of temporary shortcuts. The full set is installed once you complete onboarding so you don't accidentally trigger transcription during the tour.
+
+## Tray menu
+
+The tray icon (menu bar) gives you menu-based access to the same actions: open Settings, show / hide the overlay, switch display mode, install pending updates, and quit.

@@ -27,12 +27,13 @@ Tasks flow through five columns. A **bar chart** at the top of the Kanban view s
 Click **+ New Task** from the Kanban view or from the **+ button in the sidebar** to open the task creation dialog. Each task gets a sequential number (TASK-00001, TASK-00002, etc.). Each task has:
 
 - **Title** - A short name for the task
-- **Instruction** - Detailed description of what Claude Code should do, with a **rich text editor** supporting bold, italic, code, and lists
+- **Instruction** - Detailed description of what Claude Code should do, with a **rich text editor** supporting bold, italic, code, and lists. You can also **dictate** the instruction with the mic button — see [Voice Dictation](/features/voice-dictation)
 - **Tags** - Color-coded labels for categorization
 - **Execution mode** - `worktree` (isolated branch), `direct` (current branch), or `last used`. The default is configurable in **Settings**
-- **Model** - Choose which Claude model to use (Sonnet 4.6, Opus 4.6, or Haiku 4.5)
+- **Provider & model** - Choose Claude (Sonnet 4.6, Opus 4.7, Haiku 4.5) or Codex (GPT-5.5, GPT-5.4, GPT-5.4 Mini, 5.3 Codex, 5.3 Codex Spark)
 - **Images** - Attach reference images or mockups (drag-and-drop or paste)
 - **Destination column** - Choose where the task is created (Backlog or Todo). The default is configurable in **Settings**
+- **Auto-commit** - Per-task toggle for direct mode tasks
 
 Use the **Reset** button to clear all fields and start over.
 
@@ -52,6 +53,15 @@ For direct mode, you can optionally enable **auto-commit** and select a target b
 
 Reorder tasks within and between the **Backlog** and **Todo** columns by dragging them. Tasks in later columns (In Progress, Review, Done) cannot be dragged.
 
+## Filters
+
+Narrow the board to what matters right now:
+
+- **Filter by column** — focus on a single Kanban stage
+- **Filter by tag** — show only tasks matching one or more tags
+
+Filters apply across board and list views.
+
 ## Task queue
 
 When a task is moved to **Todo**, Coddo's queue runner automatically picks it up and starts execution. Worktree tasks can run **up to 5 in parallel** — each in its own isolated worktree, so they don't conflict. Direct mode tasks run sequentially to prevent conflicts on the same branch. You can configure the maximum number of concurrent tasks in **Settings**.
@@ -69,8 +79,9 @@ Click on any task to open the **Detail Panel** on the right side, which shows th
 
 - Edit the title and instruction
 - Manage tags
-- See Git branch information
+- See Git branch information and **last-modification timestamp** (1h, 1d, 1mo, etc.)
 - **Checkout** the task's branch directly from the card for quick branch switching
+- **Click the diff stats** on the card to jump straight to the chat with the diff viewer open
 - Track duration
 - View attached images
 

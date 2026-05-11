@@ -1,0 +1,57 @@
+---
+title: "Voice Dictation"
+description: "Dictate task instructions and chat messages directly inside Coddo, powered by OpenAI Whisper."
+icon: "microphone"
+---
+
+Voice dictation is built into every input field in Coddo. You click the mic, you speak, and the transcribed text lands in the field — ready to edit or send.
+
+## Where it works
+
+A **mic button** appears in:
+
+- The **chat input** — for free chats with Claude Code or Codex
+- The **task creation dialog** — for the title and instruction fields
+
+One click to start recording, one click to stop. The text appears in place as soon as transcription finishes.
+
+## How it works
+
+Transcription runs on **OpenAI's Whisper** through the Coddo backend. Audio is sent for processing and is not retained beyond the processing window — nothing is stored on Coddo's servers.
+
+Accuracy is strong on technical terms, file names, and spoken code fragments. Pinning the **transcription language** in Settings further improves accuracy on short utterances.
+
+## Quotas
+
+| Plan | Words per week | Max recording length |
+| --- | --- | --- |
+| **Free** | 1,000 words | 30 seconds per recording |
+| **Basic subscription** | Unlimited | Unlimited |
+
+The current usage is visible in Settings. Once the free quota is exhausted, dictation pauses until the start of the next week or until you upgrade.
+
+<Info>
+Voice dictation requires a Coddo account so the quota can be tracked. All your project data still stays local.
+</Info>
+
+## Settings
+
+In **Settings → Voice dictation** you can:
+
+- Choose the **transcription language** (default is auto, but pinning helps short clips)
+- See your current weekly usage
+- Open the upgrade flow if you want unlimited dictation
+
+## Platform support
+
+Voice dictation works on **macOS, Windows, and Linux** — anywhere Coddo runs. The mic uses your operating system's default audio input; pick the right input device in your OS sound settings.
+
+## Use cases
+
+- **Bug report on the fly** — describe the bug aloud while it's still in front of you, then send it as a task instruction
+- **Long task briefs** — a 20-second voice brief carries more context than a hurried sentence typed between two screens
+- **Hands-on flow** — kick off another task without leaving the file you're editing
+
+## What about Whisper Island?
+
+Coddo's voice dictation only works inside Coddo's input fields. If you want voice transcription **everywhere on your Mac** — Slack, Notion, your IDE, your browser, your mail client — install [Whisper Island](/whisper-island/index). It shares the same backend, the same account, and the same quota.
