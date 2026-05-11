@@ -5,7 +5,11 @@ description: "Download and install Coddo on macOS or Windows."
 
 ## Prerequisites
 
-Before installing Coddo, make sure you have **Claude Code** installed on your machine. Claude Code is a CLI tool from Anthropic that Coddo uses under the hood.
+Coddo runs on top of two CLIs: **Claude Code** (from Anthropic) and **OpenAI Codex CLI**. You don't need both — install whichever provider you want to use, or both to switch between them per task.
+
+### Claude Code
+
+Claude Code is a CLI tool from Anthropic. Install it with one of the following:
 
 <Tabs>
   <Tab title="Install script (recommended)">
@@ -29,7 +33,7 @@ Before installing Coddo, make sure you have **Claude Code** installed on your ma
   </Tab>
 </Tabs>
 
-Once installed, verify it works and log in:
+Verify it works and authenticate:
 
 ```bash
 claude --version   # Should print a version number
@@ -37,6 +41,36 @@ claude             # Follow the prompts to authenticate
 ```
 
 You need an active Claude subscription (Claude Pro, Team, or Enterprise) to use Claude Code.
+
+### OpenAI Codex CLI
+
+Codex CLI is OpenAI's coding agent. Install it via npm or Homebrew:
+
+<Tabs>
+  <Tab title="npm">
+    ```bash
+    npm install -g @openai/codex
+    ```
+  </Tab>
+  <Tab title="Homebrew">
+    ```bash
+    brew install codex
+    ```
+  </Tab>
+</Tabs>
+
+Verify it works and authenticate:
+
+```bash
+codex --version   # Should print a version number
+codex             # Follow the prompts to authenticate
+```
+
+You need an OpenAI account with API access to use Codex. Coddo supports the GPT-5.5, GPT-5.4, GPT-5.4 Mini, 5.3 Codex, and 5.3 Codex Spark models.
+
+<Tip>
+You can install either CLI on its own — Coddo will detect what's available and let you pick the provider per chat or per task. The provider step in onboarding can also be skipped if you want to configure it later from Settings.
+</Tip>
 
 ## Download Coddo
 
@@ -68,12 +102,11 @@ You need an active Claude subscription (Claude Pro, Team, or Enterprise) to use 
 When you open Coddo for the first time, you'll go through a quick onboarding:
 
 1. **Welcome screen** - Overview of Coddo
-2. **Claude Code check** - Coddo verifies that Claude Code is installed and accessible
-3. **Auth check** - Coddo verifies that Claude Code is authenticated
-4. **Login** - Sign in with your Coddo account (Google or email/password)
-5. **Ready** - You're all set to start using Coddo
+2. **Provider check** - Coddo detects which CLIs are installed (Claude Code, Codex, or both) and verifies they're authenticated. You can skip this step and configure providers later from Settings
+3. **Login** - Sign in with your Coddo account (Google or email/password) — optional
+4. **Ready** - You're all set to start using Coddo
 
-<Info>Creating a Coddo account is free. All your project data stays local on your machine.</Info>
+<Info>Creating a Coddo account is free and optional. All your project data stays local on your machine regardless.</Info>
 
 ## Updates
 

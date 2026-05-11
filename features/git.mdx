@@ -42,7 +42,7 @@ The Git workflow differs depending on which execution mode your task uses.
 
 ### Worktree tasks
 
-When a task runs in worktree mode, Coddo creates an isolated Git worktree with a dedicated branch (e.g. `coddo/1-fix-login`). Claude Code works entirely inside this worktree.
+When a task runs in worktree mode, Coddo creates an isolated Git worktree with a dedicated branch (e.g. `coddo/1-fix-login`). The agent (Claude Code or Codex) works entirely inside this worktree.
 
 Once the task is done, you **validate and merge** the branch back into the base branch from the Git view. Coddo handles:
 
@@ -59,7 +59,7 @@ When conflicts come up, the conflict dialog includes a **one-click button** that
 
 ### Direct tasks
 
-When a task runs in direct mode, Claude Code works directly in your current working directory. Changes appear immediately in the Changes tab.
+When a task runs in direct mode, the agent works directly in your current working directory. Changes appear immediately in the Changes tab.
 
 You can enable **auto-commit** in Settings (or per task) to automatically commit changes when the task completes. Otherwise, you stage and commit manually from the Changes tab.
 

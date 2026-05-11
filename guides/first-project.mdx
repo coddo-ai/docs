@@ -39,14 +39,15 @@ your-project/
 │   ├── kanban.json      # Kanban board state
 │   └── settings.json    # Project settings
 ├── CLAUDE.md            # Claude Code instructions (optional)
+├── AGENTS.md            # Codex instructions (optional)
 └── ... your code
 ```
 
 <Info>The `.coddo/` directory is local to your machine. It is automatically added to `.gitignore` by Coddo.</Info>
 
-## Step 4: Set up CLAUDE.md
+## Step 4: Set up CLAUDE.md / AGENTS.md
 
-Before chatting with Claude Code, create a `CLAUDE.md` file to give it context about your project. Use the [built-in editor](/features/claude-md) or create it manually.
+Before chatting with your agent, create a `CLAUDE.md` (Claude Code) or `AGENTS.md` (Codex) file to give it context about your project. Use the [built-in editor](/features/claude-md) or create it manually — Coddo can also generate both with AI from your codebase.
 
 Key things to include:
 - Your tech stack and frameworks
@@ -60,22 +61,22 @@ Switch to the **Kanban** view and start creating tasks:
 
 1. Click **+ New Task**
 2. Write a descriptive title
-3. Add detailed instructions for Claude Code
-4. Choose an execution mode (worktree or direct) and a model
+3. Add detailed instructions for the agent
+4. Choose a provider (Claude Code or Codex), a model, and an execution mode (worktree or direct)
 5. Optionally add tags and attach images
 6. The task appears in the **Backlog** column
 
-## Step 6: Start coding with Claude
+## Step 6: Start coding with your agent
 
 1. Move a task to **Todo** - Coddo's queue runner automatically picks it up
-2. Watch the task move to **In Progress** as Claude Code starts working
+2. Watch the task move to **In Progress** as the agent starts working
 3. Click on the task to see the live conversation in the detail panel
 4. When done, the task moves to **Review** - check the changes
 5. Validate and merge (worktree) or commit (direct), then move to **Done**
 
 ## Tips for success
 
-- **Write clear instructions** - The more specific your task instructions, the better Claude Code's output
+- **Write clear instructions** - The more specific your task instructions, the better the agent's output
 - **Use worktree mode** for independent tasks that can run in parallel
 - **Review changes carefully** - Check the diff before merging
-- **Iterate** - If Claude's first attempt isn't right, send another message from the review state
+- **Iterate** - If the first attempt isn't right, send another message from the review state

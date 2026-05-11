@@ -1,10 +1,10 @@
 ---
 title: "Kanban Board"
-description: "Track your tasks visually with a drag-and-drop Kanban board integrated with Claude Code."
+description: "Track your tasks visually with a drag-and-drop Kanban board integrated with Claude Code and Codex."
 icon: "table-columns"
 ---
 
-The Kanban board is the heart of Coddo's task management. It gives you a visual overview of all your tasks and their progress, updated in real time as Claude Code works.
+The Kanban board is the heart of Coddo's task management. It gives you a visual overview of all your tasks and their progress, updated in real time as your agent (Claude Code or Codex) works.
 
 <Frame>
   <img src="/images/coddo-kanban-overview.png" alt="Coddo Kanban board with tasks across columns" />
@@ -18,7 +18,7 @@ Tasks flow through five columns. A **bar chart** at the top of the Kanban view s
 |--------|-------------|
 | **Backlog** | Ideas and future tasks not yet planned |
 | **Todo** | Tasks planned and ready to be worked on |
-| **In Progress** | Tasks currently being executed by Claude Code |
+| **In Progress** | Tasks currently being executed by the agent |
 | **Review** | Completed tasks awaiting your review |
 | **Done** | Finished and reviewed tasks |
 
@@ -27,7 +27,7 @@ Tasks flow through five columns. A **bar chart** at the top of the Kanban view s
 Click **+ New Task** from the Kanban view or from the **+ button in the sidebar** to open the task creation dialog. Each task gets a sequential number (TASK-00001, TASK-00002, etc.). Each task has:
 
 - **Title** - A short name for the task
-- **Instruction** - Detailed description of what Claude Code should do, with a **rich text editor** supporting bold, italic, code, and lists. You can also **dictate** the instruction with the mic button — see [Voice Dictation](/features/voice-dictation)
+- **Instruction** - Detailed description of what the agent should do, with a **rich text editor** supporting bold, italic, code, and lists. You can also **dictate** the instruction with the mic button — see [Voice Dictation](/features/voice-dictation)
 - **Tags** - Color-coded labels for categorization
 - **Execution mode** - `worktree` (isolated branch), `direct` (current branch), or `last used`. The default is configurable in **Settings**
 - **Provider & model** - Choose Claude (Sonnet 4.6, Opus 4.7, Haiku 4.5) or Codex (GPT-5.5, GPT-5.4, GPT-5.4 Mini, 5.3 Codex, 5.3 Codex Spark)
@@ -47,7 +47,7 @@ For worktree mode, you select a **base branch** (e.g. `main`). Coddo automatical
 
 For direct mode, you can optionally enable **auto-commit** and select a target branch.
 
-<Tip>Write clear, detailed instructions for best results. The instruction is what Claude Code uses to understand what you want.</Tip>
+<Tip>Write clear, detailed instructions for best results. The instruction is what the agent uses to understand what you want.</Tip>
 
 ## Drag and drop
 
@@ -93,11 +93,11 @@ Examples: `bug`, `feature`, `refactor`, `urgent`, `design`
 
 ## Execution modes
 
-When creating a task, you choose how Claude Code interacts with your Git repository.
+When creating a task, you choose how the agent interacts with your Git repository.
 
 ### Worktree mode (default)
 
-Coddo creates a **Git worktree** - a full, isolated copy of your repository checked out on a dedicated branch. Claude Code works inside this worktree without touching your main working directory.
+Coddo creates a **Git worktree** - a full, isolated copy of your repository checked out on a dedicated branch. The agent works inside this worktree without touching your main working directory.
 
 - You select a **base branch** (e.g. `main`) and Coddo generates a branch name like `coddo/1-fix-login`
 - Up to **5 worktree tasks can run in parallel**, each in its own isolated copy. Configure the concurrency limit in **Settings**
@@ -108,7 +108,7 @@ This is the recommended mode for most workflows.
 
 ### Direct mode
 
-Claude Code works directly in your **current working directory**, on whatever branch is currently checked out.
+The agent works directly in your **current working directory**, on whatever branch is currently checked out.
 
 - You can optionally select a **target branch** to work on
 - You can enable **auto-commit** to automatically commit changes when the task finishes

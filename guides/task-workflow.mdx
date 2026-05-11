@@ -27,9 +27,9 @@ Add tasks here when you think of something that needs to be done, but you're not
 When a task is moved to Todo, Coddo's **queue runner** automatically picks it up and starts executing it. Before moving a task here, make sure:
 
 - The task has a clear **title**
-- The **instruction** is detailed enough for Claude Code
+- The **instruction** is detailed enough for the agent
 - You've configured the **execution mode** (worktree, direct, or last used — the default is configurable in **Settings**)
-- You've selected a **model** (Sonnet, Opus, or Haiku)
+- You've picked a **provider** (Claude Code or Codex) and a **model**
 
 ### 3. In Progress
 
@@ -39,7 +39,7 @@ When the queue runner picks up a task:
 
 1. A **chat thread** is linked to the task (or created automatically)
 2. If using **worktree mode**, a Git worktree is created
-3. Claude Code reads the task instruction and begins working
+3. The agent (Claude Code or Codex) reads the task instruction and begins working
 4. Progress is shown in real time (current tool, completed tools, todo items)
 
 During execution you can:
@@ -51,7 +51,7 @@ During execution you can:
 
 **Purpose:** Verify completed work before marking as done.
 
-After Claude Code finishes:
+After the agent finishes:
 
 1. Review the changes in the **Chat** view (diffs, tool outputs)
 2. For worktree tasks, validate and merge the branch
@@ -96,7 +96,7 @@ Tasks run on your current branch. Benefits:
 Every in-progress task is linked to a chat thread. This means:
 
 - Opening a task shows the full conversation in the detail panel
-- Claude Code has the task instruction as context
+- The agent has the task instruction as context
 - Duration from the chat is attributed to the task
 - You can continue the conversation from the review state
 

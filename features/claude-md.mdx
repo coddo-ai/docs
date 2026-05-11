@@ -1,14 +1,18 @@
 ---
-title: "CLAUDE.md Editor"
-description: "Configure Claude Code's behavior for your project with the built-in CLAUDE.md editor."
+title: "CLAUDE.md / AGENTS.md Editor"
+description: "Configure how your agent behaves in this project with the built-in instructions editor."
 icon: "file-pen"
 ---
 
-The **CLAUDE.md** file is a special configuration file that tells Claude Code how to behave in your project. Coddo includes a built-in editor so you can manage it without leaving the app.
+The **CLAUDE.md** file (and its Codex equivalent **AGENTS.md**) is a special configuration file that tells your agent how to behave in this project. Coddo includes a built-in editor so you can manage it without leaving the app.
 
-## What is CLAUDE.md?
+## What is CLAUDE.md / AGENTS.md?
 
-`CLAUDE.md` is a markdown file at the root of your project that gives Claude Code project-specific instructions. It's read by Claude Code every time it starts a session.
+`CLAUDE.md` is a markdown file at the root of your project that gives Claude Code project-specific instructions. **`AGENTS.md`** plays the same role for Codex. Both are read by the agent every time it starts a session.
+
+<Info>
+Coddo's project-init flow generates both files and keeps them in sync. Edits made in the built-in editor write to whichever file your active provider expects.
+</Info>
 
 Common things to include:
 
@@ -25,11 +29,11 @@ Common things to include:
 3. Edit the markdown content
 4. Changes are saved directly to the `CLAUDE.md` file in your project root
 
-<Tip>A well-written CLAUDE.md dramatically improves Claude Code's output quality. The more context you give, the better the results.</Tip>
+<Tip>A well-written CLAUDE.md / AGENTS.md dramatically improves your agent's output quality. The more context you give, the better the results.</Tip>
 
 ## Generate with AI
 
-If you don't have a `CLAUDE.md` file yet, or if you want to start fresh, click the **Regenerate** button. Coddo will analyze your project's codebase and automatically generate a complete `CLAUDE.md` tailored to your project - including the tech stack, file structure, conventions, and build commands.
+If you don't have a `CLAUDE.md` or `AGENTS.md` file yet, or if you want to start fresh, click the **Regenerate** button. Coddo will analyze your project's codebase and automatically generate complete instruction files tailored to your project — including the tech stack, file structure, conventions, and build commands.
 
 This is the fastest way to initialize your project configuration.
 
@@ -62,7 +66,7 @@ This is the fastest way to initialize your project configuration.
 
 ## Tips
 
-- Keep it concise - Claude Code reads the entire file for every session
+- Keep it concise — the agent reads the entire file for every session
 - Focus on what's unique to your project
 - Update it as your project evolves
 - Include examples of patterns you want Claude to follow

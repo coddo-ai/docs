@@ -1,13 +1,13 @@
 ---
 title: "Chat Interface"
-description: "Talk to Claude Code through a rich visual interface with streaming, diffs, and more."
+description: "Talk to Claude Code or Codex through a rich visual interface with streaming, diffs, and more."
 icon: "message"
 ---
 
-The Chat view is where you interact with Claude Code. Instead of working in a terminal, you get a rich UI with real-time streaming, tool use visualization, and interactive blocks.
+The Chat view is where you interact with your agent — **Claude Code** or **Codex CLI**. Instead of working in a terminal, you get a rich UI with real-time streaming, tool use visualization, and interactive blocks.
 
 <Frame>
-  ![Chat view with Claude Code showing tool use and todo blocks](/images/coddo-task-flow.png)
+  ![Chat view showing tool use and todo blocks](/images/coddo-task-flow.png)
 </Frame>
 
 ## Chat threads
@@ -15,7 +15,7 @@ The Chat view is where you interact with Claude Code. Instead of working in a te
 Each project can have **multiple chat threads**. You can create new threads for different tasks or conversations. Threads are persisted locally in your project's `.coddo/threads/` directory.
 
 - **Create** a new chat from the sidebar
-- **Resume** a previous conversation - Coddo uses Claude Code's session system to maintain context
+- **Resume** a previous conversation — Coddo reuses the provider's native session system to maintain context
 - **Pin** a chat to keep it at the top of the sidebar
 - **Rename** a chat via the **more** menu
 - **Delete** threads you no longer need
@@ -24,15 +24,15 @@ When a Kanban task starts, a chat thread is **automatically created and linked**
 
 ## Chat modes
 
-Coddo supports two chat modes that change how Claude Code responds. Switch modes from the **mode selector** in the chat input area.
+Coddo supports two chat modes that change how the agent responds. Switch modes from the **mode selector** in the chat input area.
 
 ### Execution mode
 
-The default mode. Claude Code **reads, writes, and runs code** in your project. It executes tools, creates files, runs commands, and makes real changes to your codebase.
+The default mode. The agent **reads, writes, and runs code** in your project. It executes tools, creates files, runs commands, and makes real changes to your codebase.
 
 ### Plan mode
 
-Claude Code only **analyzes and plans** without making any changes. It reads your code and proposes a strategy, but does not write files or run commands. Use this when you want to:
+The agent only **analyzes and plans** without making any changes. It reads your code and proposes a strategy, but does not write files or run commands. Use this when you want to:
 
 - Get an implementation plan before committing to changes
 - Understand a complex part of the codebase
@@ -42,7 +42,7 @@ You can set the default chat mode in **Settings**.
 
 ## Real-time streaming
 
-Messages from Claude Code are **streamed in real time** as they're generated, with your codebase as context. Your last message is **pinned at the top of the chat view** with sticky scroll, so you always keep sight of what you asked while Claude Code responds below.
+Messages from the agent are **streamed in real time** as they're generated, with your codebase as context. Your last message is **pinned at the top of the chat view** with sticky scroll, so you always keep sight of what you asked while the agent responds below.
 
 ## Providers and models
 
@@ -86,7 +86,7 @@ Every chat input and task instruction field has a **mic button**. Click it to re
 
 ### Tool use blocks
 
-When Claude Code uses a tool (reading files, writing code, running commands), you see a **Tool Use Block** showing:
+When the agent uses a tool (reading files, writing code, running commands), you see a **Tool Use Block** showing:
 
 - The tool name and input parameters
 - The output/result
@@ -102,11 +102,11 @@ For worktree task threads, a **visual diff viewer** shows all changes made by th
 
 ### Question blocks
 
-When Claude Code asks you a question with multiple options, you get an interactive **Question Block** with clickable choices and descriptions.
+When the agent asks you a question with multiple options, you get an interactive **Question Block** with clickable choices and descriptions.
 
 ### Todo blocks
 
-Claude Code's internal task lists are rendered as **Todo Blocks**, showing you the AI's planned steps and progress.
+The agent's internal task lists are rendered as **Todo Blocks**, showing you the planned steps and progress.
 
 ## Image support
 
@@ -116,11 +116,11 @@ You can include images in your messages:
 - **Paste** images from your clipboard
 - Supports all common image formats (PNG, JPG, GIF, WebP, SVG, etc.)
 
-This is useful for sharing mockups, screenshots, or design references with Claude Code.
+This is useful for sharing mockups, screenshots, or design references with the agent.
 
 ## Duration & cost tracking
 
-Each message displays its **duration**, **token count**, and **cost** — so you can track how long Claude Code takes to respond and how much each interaction costs.
+Each message displays its **duration**, **token count**, and **cost** — so you can track how long the agent takes to respond and how much each interaction costs.
 
 ## Chat header quick actions
 

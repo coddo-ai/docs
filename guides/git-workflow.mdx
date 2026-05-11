@@ -17,7 +17,7 @@ The typical Git workflow in Coddo follows these steps:
     Name your branch descriptively (e.g., `feature/add-login`, `fix/header-bug`). Coddo automatically sanitizes branch names.
   </Step>
   <Step title="Work on your task">
-    Create a Kanban task linked to the branch. Chat with Claude Code to implement the changes.
+    Create a Kanban task linked to the branch. Chat with Claude Code or Codex to implement the changes.
   </Step>
   <Step title="Stage and commit">
     Open the **Changes** tab to see modified files. Stage the files you want to commit, write a message, and commit.
@@ -33,7 +33,7 @@ When using **worktree mode** for tasks, Coddo manages branches automatically:
 
 1. **Task created** - You select a base branch (e.g., `main`)
 2. **Task starts** - Coddo creates a Git worktree with a dedicated branch (e.g., `coddo/1-fix-login`)
-3. **Task runs** - Claude Code works in the isolated worktree
+3. **Task runs** - The agent works in the isolated worktree
 4. **Task completes** - You review changes and merge the branch
 5. **Cleanup** - The worktree is removed after merging
 
